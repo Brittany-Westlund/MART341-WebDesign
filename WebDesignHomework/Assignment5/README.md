@@ -14,4 +14,4 @@ Canvas is our virtual __________ where we can access the weekly content, discuss
 
 The external course website functions as our __________.
 
-Wordbank: classroom; textbook; store; push; create; contents; index; host
+**Wordbank: classroom; textbook; store; push; create; contents; index; host**
