@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Autumn Orchard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {background-color: rgb(255, 237, 239)}
+        h1, h3 {color: rgb(128, 0, 73)}
+        h2, p {color: rgb(45, 34, 13)}
+        .recipe-section {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .recipe {
+            width: 50%;
+            float: left;
+            margin: 10px;
+            border: 1px solid rgb(128, 0, 73);
+            padding: 15px;
+            background-color: #fff;
+            box-sizing: border-box;
+        }
+        .media {
+            margin-top: 10px;
+        }
+        .clear {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <!--Nav links-->
+    <a style="float: right; padding: 10px" href="index.html">HOME</a>
+    <a style="float: right; padding: 10px" href="activities.html">ACTIVITIES</a>
+    <a style="float: right; padding: 10px" href="recipes.html">RECIPES</a>
+
+
+    <h1 style="text-align: left;">Cozy Harvest</h1>
+   
+   <!--Hero image-->
+    <img src="images/autumn-slices-pie-optimized.jpg" style="width: 100%">
+        
+    <h1>Recipes</h1>
+
+     <!-- Recipe section using float for layout -->
+     <div class="recipe-section">
+        <div class="recipe">
+            <h2>Apple Pie Recipe</h2>
+            <p>This <span class="special-note">classic apple pie</span> is a perfect autumn treat.</p>
+            <p>Ingredients: Apples, cinnamon, sugar, pie crust.</p>
+            <div class="media">
+                <audio controls>
+                    <source src="audio/apple-pie.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+
+        <div class="recipe">
+            <h2>Pumpkin Soup</h2>
+            <p>This <span class="special-note">cozy pumpkin soup</span> is great for chilly days.</p>
+            <p>Ingredients: Pumpkin, garlic, cream, spices.</p>
+            <div class="media">
+                <video width="100%" controls>
+                    <source src="videos/pumpkin-soup.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <div class="recipe">
+            <h2>Pumpkin Soup</h2>
+            <p>This <span class="special-note">cozy pumpkin soup</span> is great for chilly days.</p>
+            <p>Ingredients: Pumpkin, garlic, cream, spices.</p>
+            <div class="media">
+                <video width="100%" controls>
+                    <source src="videos/pumpkin-soup.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <div class="clear"></div> <!-- Clears the float after the two recipes -->
+    </div>
+
+    <!-- Embed external content using an iframe -->
+    <h3>Find us at the orchard</h3>
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.6734061983057!2d-122.40641758468238!3d37.785834379757616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085810c4ebf7c33%3A0xdb587b50126c6af!2sApple%20Orchard!5e0!3m2!1sen!2sus!4v1635972215375!5m2!1sen!2sus" 
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+    <!-- Navigation Links -->
+    <p><a href="index.html">Return to Home</a></p>
+    
+    <!-- Escape character example -->
+    <p>&copy; 2024 Autumn Orchard &lt;Enjoy your harvest&gt;</p>
+
+</body>
+</html>
+
+</body>
+</html>
