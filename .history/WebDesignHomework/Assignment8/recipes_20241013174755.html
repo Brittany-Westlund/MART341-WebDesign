@@ -7,34 +7,29 @@
     <title>Autumn Orchard</title>
     
     <style>
-        #logo {
-            text-align: left;
-            text-decoration: none;
-            color:rgb(114, 20, 50)
-        }
-        nav {
-            float: right; /* Tells the nav items to float to the right of its container */
-            padding: 0 10px 10px 10px;
-        } 
-        nav a {
-            text-decoration: none; /* Removes the underline for each link */
-            padding: 10px; /* Adds spacing around each link */
-            color: black; /* Set a color for the text, if needed */
-            display: inline-block; /* Ensures the links are treated like blocks within the nav */
-        }   
         body {
             background-color: rgb(255, 237, 239);
         }
         h1 {
             color: rgb(128, 0, 73); /* Sets the text's color */
         }    
+        h3 {
+            color: rgb(128, 0, 73);
+            text-align: center;
+        }
         h2, p {
             color: rgb(103, 14, 51);
             text-align: center;
         }
-        h3 {
-            color: rgb(128, 0, 73);
-            text-align: center;
+        .nav {
+            float: right; /* Tells the nav items to float to the right of its container */
+            padding: 10px;
+            text-decoration: none; /* Removes the link's underline */
+        }    
+        #logo {
+            text-align: left;
+            text-decoration: none;
+            color:rgb(87, 68, 17)
         }
         .recipe-section {
             width: 90%;
@@ -58,8 +53,9 @@
             font-weight: bold;
         }
         .clear {
-            clear: both; /* Ensures the following content doesn't overlap with the floated elements above */
+            clear: both; /* Clears the float for the content that follows */
         }
+     
         .media-section {
             width: 90%;
             margin: 0 auto;
@@ -85,30 +81,29 @@
             box-sizing: border-box;
             text-align: center;
         }
-    </style>
-</head>
+        .clear {
+            clear: both; /* Ensures the following content doesn't overlap with the floated elements above */
+        }
+</style>
 
+</head>
 <body>
 
-
-<!-- Navigation links and placeholder logo -->
-        <nav>
-            <a href="index.html">HOME</a>
-            <a href="activities.html">ACTIVITIES</a>
-            <a href="recipes.html">RECIPES</a>
-        </nav>
-        <h1>
-            <a id="logo" href="index.html">Cozy Harvest</a>
-        </h1>
+<!-- Navigation links -->
+    <a class="nav" href="index.html">HOME</a>
+    <a class="nav" href="activities.html">ACTIVITIES</a>
+    <a class="nav" href="recipes.html">RECIPES</a>
+    <h1>
+        <a id="logo" href="index.html">Cozy Harvest</a>
+    </h1>
 
 
 <!-- Hero video -->
-    <div id="hero-video">
-        <video autoplay muted loop style="width: 100%; height: auto;">
-        <source src="video/autumn-gather-holding-hands.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-        </video>
-    </div>
+    <video autoplay muted loop style="width: 100%; height: auto;">
+    <source src="video/autumn-gather-holding-hands.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+
 
 <!-- Recipe section -->
     <h1 style="text-align: center; margin-top: 30px;">• Recipes •</h1>
@@ -190,8 +185,7 @@
 
 
 <!-- Escape character example -->
-    <footer>
-        <p>&copy; 2024 Autumn Orchard • Enjoy Your Harvest</p>
-    </footer>
+    <p>&copy; 2024 Autumn Orchard • Enjoy Your Harvest</p>
+
 </body>
 </html>
