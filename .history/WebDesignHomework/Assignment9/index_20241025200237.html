@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Autumn Orchard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #logo {
+            text-align: left;
+            text-decoration: none;
+            color:rgb(114, 20, 50)
+        }
+        nav {
+            float: right; /* Tells the nav items to float to the right of its container */
+            padding: 0 10px 10px 10px;
+        } 
+        nav a {
+            text-decoration: none; /* Removes the underline for each link */
+            padding: 10px; /* Adds spacing around each link */
+            color: black; /* Set a color for the text, if needed */
+            display: inline-block; /* Ensures the links are treated like blocks within the nav */
+        }   
+        body {
+            background-color: rgb(255, 237, 239);
+        }
+        h1 {
+            color: rgb(128, 0, 73); /* Sets the text's color */
+        }    
+        h2, p {
+            color: rgb(103, 14, 51);
+            text-align: center;
+        }
+        h3 {
+            color: rgb(128, 0, 73);
+            text-align: center;
+        }
+        .recipe-section {
+            width: 90%;
+            margin: 0 auto; /* Centers block-level elements, like divs, horizontally - 0 is for the top and bottom values - auto is for the left and right values - auto allows the browser to adjust the space on the left and right automatically */
+            padding: 0 20px 20px 20px; /* Places padding around all sides except the top */
+
+        }
+        .recipe {
+            width: 30%; /* Each recipe takes up 30% of the width */
+            float: left;
+            margin: 1.66%; /* Spacing between the recipes */
+            padding: 15px;
+            background-color: #f2fcff;
+            box-sizing: border-box; /* Ensures padding and border are included in width */
+            text-align: center; /* Centers text and images in the recipe div */
+        }
+        .recipe img {
+            width: 100%; /* Makes images full width of container */
+            height: auto;
+        }
+
+        .materials-list {
+            columns: 3; /* Splits the list into three columns */
+            column-gap: 20px; /* Adjusts space between columns */
+            list-style-position: inside;
+            margin: 1.66%; /* Spacing between the recipes */
+            padding: 15px;
+            background-color: #f2fcff;
+            box-sizing: border-box; /* Ensures padding and border are included in width */
+            
+        }
+
+        .special-note {
+            font-weight: bold;
+        }
+        .clear {
+            clear: both; /* Ensures the following content doesn't overlap with the floated elements above */
+        }
+        .media-section {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .audio-section {
+            width: 30%; /* Audio takes 1/3 of the width */
+            height: 350px;
+            float: left;
+            margin: 1.66%;
+            padding: 15px;
+            background-color: #f2fcff;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .timer-section {
+            width: 63%; /* Timer takes 2/3 of the width */
+            height: 350px;
+            float: left;
+            margin: 1.66%;
+            padding: 15px;
+            background-color: #f2fcff;
+            box-sizing: border-box;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <a style="float: right; padding: 10px" href="index.html">HOME</a>
+    <a style="float: right; padding: 10px" href="activities.html">ACTIVITIES</a>
+    <a style="float: right; padding: 10px" href="recipes.html">RECIPES</a>
+
+    <h1 style="text-align: left;"></h1>
+    <img src="images/autumn-leaf-banner-hero.jpg" style="width: 100%">
+       
+        <h2 style="text-align: center;">Illuminate Your Home</h2>
+        <h3 style="text-align: center;">How to Create a Succulent Candle in a Glass Jar</h3>     
+        
+    <img src="images/green_hexagonal_candle.jpg" width="33%"/>
+    <img src="images/succulent_candle_sideview.jpg" width="33%"/>
+    <img src="images/flower_detail_candle.jpg" width="33%"/>
+        
+            <p>As the air turns crisp and the leaves change to vibrant shades of orange and red, autumn brings a sense of warmth and coziness to our lives. It’s a time for savoring hot drinks, bundling up in soft layers, and enjoying the simple pleasures of the season. From pumpkin patches to scenic hikes through colorful forests, autumn invites us to slow down and appreciate the beauty around us. Whether you’re curled up with a good book or exploring the great outdoors, fall is a season full of charm and nostalgia.</p>
+
+
+    <!-- Materials -->
+    <div class="materials-section">
+
+        <div class="recipe-section">
+            <img src="images/flower_detail_candle.jpg" alt="A freshly baked pecan pie" width="100%" height="auto">
+            <h2>Materials</h2>
+            <ul class="materials-list">
+                <li>Glass jar (clear)</li>
+                <li>Candle wax (soy, paraffin, or beeswax)</li>
+                <li>Wick (cotton or wood)</li>
+                <li>Wick sticker and metal holder</li>
+                <li>Mold for succulents (silicone)</li>
+                <li>Essential oils or fragrance (optional)</li>
+                <li>Double boiler or microwave-safe container</li>
+                <li>Thermometer</li>
+                <li>Stirring stick</li>
+                <li>Scissors</li>
+                <li>Color dye (optional)</li>
+                <li>Safety stickers</li>
+              </ul>
+        </div>
+    
+    
+    <!-- Instructions -->
+    <h1 style="text-align: center; margin-top: 30px;">Instructions</h1>
+    <div class="recipe-section">
+
+        <div class="recipe">
+            <img src="images/autumn-slices-pie-square.jpg" alt="A freshly baked pecan pie">
+            <h2>1</h2>
+            <p>This <span class="special-note">3</span> is a holiday favorite.</p>
+            <p>Ingredients: Pecans, brown sugar, butter, vanilla.</p>
+            <a href="https://sugarspunrun.com/pecan-pie-recipe/" target="_blank">View Full Recipe</a>
+        </div>
+
+        <div class="recipe">
+            <img src="images/autumn-quiche-square.jpg" alt="Tasty butternut squash quiche">
+            <h2>2</h2>
+            <p>This <span class="special-note">creamy soup</span> is comforting and delicious.</p>
+            <p>Ingredients: Butternut squash, egg, onion, cream.</p>
+            <a href="https://www.shekeepsalovelyhome.com/butternut-squash-quiche/" target="_blank">View Full Recipe</a>
+        </div>
+
+        <div class="recipe">
+            <img src="images/fox-cookies-square.jpg" alt="Beautiful fox cookies">
+            <h2>3</h2>
+            <p>These <span class="special-note">fox cookies</span> are perfect for a fall dessert.</p>
+            <p>Ingredients: Flour, cinnamon, nutmeg, butter.</p>
+            <a href="https://thebearfootbaker.com/fun-little-fox-cookies/" target="_blank">View Full Recipe</a>
+        </div>
+
+        <div class="recipe">
+            <img src="images/autumn-bundt-cake-square.jpg" alt="A delicious spiced pumpkin bread">
+            <h2>4</h2>
+            <p>This <span class="special-note">soft pumpkin bread</span> is a must-bake.</p>
+            <p>Ingredients: Pumpkin puree, sugar, cinnamon.</p>
+            <a href="https://letsdishrecipes.com/autumn-spice-bundt-cake/" target="_blank">View Full Recipe</a>
+        </div>
+
+        <div class="recipe">
+            <img src="images/fox-cookies-square.jpg" alt="Beautiful fox cookies">
+            <h2>5</h2>
+            <p>These <span class="special-note">fox cookies</span> are perfect for a fall dessert.</p>
+            <p>Ingredients: Flour, cinnamon, nutmeg, butter.</p>
+            <a href="https://thebearfootbaker.com/fun-little-fox-cookies/" target="_blank">View Full Recipe</a>
+        </div>
+
+        <div class="recipe">
+            <img src="images/autumn-bundt-cake-square.jpg" alt="A delicious spiced pumpkin bread">
+            <h2>6</h2>
+            <p>This <span class="special-note">soft pumpkin bread</span> is a must-bake.</p>
+            <p>Ingredients: Pumpkin puree, sugar, cinnamon.</p>
+            <a href="https://letsdishrecipes.com/autumn-spice-bundt-cake/" target="_blank">View Full Recipe</a>
+        </div>
+
+        <div class="recipe">
+            <img src="images/fox-cookies-square.jpg" alt="Beautiful fox cookies">
+            <h2>7</h2>
+            <p>These <span class="special-note">fox cookies</span> are perfect for a fall dessert.</p>
+            <p>Ingredients: Flour, cinnamon, nutmeg, butter.</p>
+            <a href="https://thebearfootbaker.com/fun-little-fox-cookies/" target="_blank">View Full Recipe</a>
+        </div>
+
+        <div class="recipe">
+            <img src="images/autumn-bundt-cake-square.jpg" alt="A delicious spiced pumpkin bread">
+            <h2>8</h2>
+            <p>This <span class="special-note">soft pumpkin bread</span> is a must-bake.</p>
+            <p>Ingredients: Pumpkin puree, sugar, cinnamon.</p>
+            <a href="https://letsdishrecipes.com/autumn-spice-bundt-cake/" target="_blank">View Full Recipe</a>
+        </div>
+
+        <div class="recipe">
+            <img src="images/fox-cookies-square.jpg" alt="Beautiful fox cookies">
+            <h2>9</h2>
+            <p>These <span class="special-note">fox cookies</span> are perfect for a fall dessert.</p>
+            <p>Ingredients: Flour, cinnamon, nutmeg, butter.</p>
+            <a href="https://thebearfootbaker.com/fun-little-fox-cookies/" target="_blank">View Full Recipe</a>
+        </div>
+
+        <div class="recipe">
+            <img src="images/autumn-bundt-cake-square.jpg" alt="A delicious spiced pumpkin bread">
+            <h2>10</h2>
+            <p>This <span class="special-note">soft pumpkin bread</span> is a must-bake.</p>
+            <p>Ingredients: Pumpkin puree, sugar, cinnamon.</p>
+            <a href="https://letsdishrecipes.com/autumn-spice-bundt-cake/" target="_blank">View Full Recipe</a>
+        </div>
+
+        <div class="recipe">
+            <img src="images/pumpkin-pie-leaves.jpg" alt="A beautiful pumpkin pie with leaf crust topping">
+            <h2>11</h2>
+            <p>This <span class="special-note">1</span> is a perfect autumn treat.</p>
+            <p>Ingredients: Pumpkin puree, cinnamon, sugar.</p>
+            <a href="https://www.williams-sonoma.com/recipe/pumpkin-pie.html" target="_blank">View Full Recipe</a>
+        </div>
+
+        <div class="recipe">
+            <img src="images/autumn-coffee-mugs-square.jpg" alt="Two mugs with an outdoor background">
+            <h2>12</h2>
+            <p>This <span class="special-note">2</span> is great for chilly days.</p>
+            <p>Ingredients: Pumpkin, garlic, cream, spices.</p>
+            <a href="https://www.tasteofhome.com/recipes/pumpkin-soup/" target="_blank">View Full Recipe</a>
+        </div>
+
+        <div class="clear"></div> <!-- Clears the float after recipe items -->
+    </div>
+        
+ 
+            
+</body>
+</html>

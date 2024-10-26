@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Autumn Orchard</title>
+    
+    <style>
+        #logo {
+            text-align: left;
+            text-decoration: none;
+            color:rgb(114, 20, 50)
+        }
+        nav {
+            float: right; /* Tells the nav items to float to the right of its container */
+            padding: 0 10px 10px 10px;
+        } 
+        nav a {
+            text-decoration: none; /* Removes the underline for each link */
+            padding: 10px; /* Adds spacing around each link */
+            color: black; /* Set a color for the text, if needed */
+            display: inline-block; /* Ensures the links are treated like blocks within the nav */
+        }   
+        body {
+            background-color: rgb(255, 237, 239);
+        }
+        h1 {
+            color: rgb(128, 0, 73); /* Sets the text's color */
+        }    
+        h2, p {
+            color: rgb(103, 14, 51);
+            text-align: center;
+        }
+        h3 {
+            color: rgb(128, 0, 73);
+            text-align: center;
+        }
+        .recipe-section {
+            width: 90%;
+            margin: 0 auto; /* Centers block-level elements, like divs, horizontally - 0 is for the top and bottom values - auto is for the left and right values - auto allows the browser to adjust the space on the left and right automatically */
+            padding: 0 20px 20px 20px; /* Places padding around all sides except the top */
+        }
+        .recipe {
+            width: 30%; /* Each recipe takes up 30% of the width */
+            float: left;
+            margin: 1.66%; /* Spacing between the recipes */
+            padding: 15px;
+            background-color: #f2fcff;
+            box-sizing: border-box; /* Ensures padding and border are included in width */
+            text-align: center; /* Centers text and images in the recipe div */
+        }
+        .recipe img {
+            width: 100%; /* Makes images full width of container */
+            height: auto;
+        }
+        .special-note {
+            font-weight: bold;
+        }
+        .clear {
+            clear: both; /* Ensures the following content doesn't overlap with the floated elements above */
+        }
+        .media-section {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .audio-section {
+            width: 30%; /* Audio takes 1/3 of the width */
+            height: 350px;
+            float: left;
+            margin: 1.66%;
+            padding: 15px;
+            background-color: #f2fcff;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .timer-section {
+            width: 63%; /* Timer takes 2/3 of the width */
+            height: 350px;
+            float: left;
+            margin: 1.66%;
+            padding: 15px;
+            background-color: #f2fcff;
+            box-sizing: border-box;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+
+<!-- Navigation links and placeholder logo -->
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="activities.html">ACTIVITIES</a>
+            <a href="recipes.html">RECIPES</a>
+        </nav>
+        <h1>
+            <a id="logo" href="index.html">Cozy Harvest</a>
+        </h1>
+
+
+<!-- Hero video -->
+    <div id="hero-video">
+        <video autoplay muted loop style="width: 100%; height: auto;">
+        <source src="video/autumn-gather-holding-hands.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+    </div>
+
+<!-- Recipe section -->
+    <h1 style="text-align: center; margin-top: 30px;">• Recipes •</h1>
+    <div class="recipe-section">
+        <div class="recipe">
+            <img src="images/pumpkin-pie-leaves.jpg" alt="A beautiful pumpkin pie with leaf crust topping">
+            <h2>Pumpkin Pie</h2>
+            <p>This <span class="special-note">pumpkin pie</span> is a perfect autumn treat.</p>
+            <p>Ingredients: Pumpkin puree, cinnamon, sugar.</p>
+            <a href="https://www.williams-sonoma.com/recipe/pumpkin-pie.html" target="_blank">View Full Recipe</a>
+        </div>
+
+        <div class="recipe">
+            <img src="images/autumn-coffee-mugs-square.jpg" alt="Two mugs with an outdoor background">
+            <h2>Pumpkin Soup</h2>
+            <p>This <span class="special-note">cozy pumpkin soup</span> is great for chilly days.</p>
+            <p>Ingredients: Pumpkin, garlic, cream, spices.</p>
+            <a href="https://www.tasteofhome.com/recipes/pumpkin-soup/" target="_blank">View Full Recipe</a>
+        </div>
+
+        <div class="recipe">
+            <img src="images/autumn-slices-pie-square.jpg" alt="A freshly baked pecan pie">
+            <h2>Pecan Pie</h2>
+            <p>This <span class="special-note">sweet pecan pie</span> is a holiday favorite.</p>
+            <p>Ingredients: Pecans, brown sugar, butter, vanilla.</p>
+            <a href="https://sugarspunrun.com/pecan-pie-recipe/" target="_blank">View Full Recipe</a>
+        </div>
+
+        <div class="recipe">
+            <img src="images/autumn-quiche-square.jpg" alt="Tasty butternut squash quiche">
+            <h2>Butternut Squash Quiche</h2>
+            <p>This <span class="special-note">creamy soup</span> is comforting and delicious.</p>
+            <p>Ingredients: Butternut squash, egg, onion, cream.</p>
+            <a href="https://www.shekeepsalovelyhome.com/butternut-squash-quiche/" target="_blank">View Full Recipe</a>
+        </div>
+
+        <div class="recipe">
+            <img src="images/fox-cookies-square.jpg" alt="Beautiful fox cookies">
+            <h2>Fox Cookies</h2>
+            <p>These <span class="special-note">fox cookies</span> are perfect for a fall dessert.</p>
+            <p>Ingredients: Flour, cinnamon, nutmeg, butter.</p>
+            <a href="https://thebearfootbaker.com/fun-little-fox-cookies/" target="_blank">View Full Recipe</a>
+        </div>
+
+        <div class="recipe">
+            <img src="images/autumn-bundt-cake-square.jpg" alt="A delicious spiced pumpkin bread">
+            <h2>Pumpkin Bread</h2>
+            <p>This <span class="special-note">soft pumpkin bread</span> is a must-bake.</p>
+            <p>Ingredients: Pumpkin puree, sugar, cinnamon.</p>
+            <a href="https://letsdishrecipes.com/autumn-spice-bundt-cake/" target="_blank">View Full Recipe</a>
+        </div>
+
+        <div class="clear"></div> <!-- Clears the float after recipe items -->
+    </div>
+
+
+<!-- Media section -->
+    <h1 style="text-align: center;">• Media •</h1>
+    <div class="media-section">   
+<!-- Audio section -->
+        <div class="media-item audio-section">
+            <h3>Relax and Listen While You Cook</h3>
+            <img src="images/autumn-leaf-banner-hero.jpg" alt="Leaf banner" style="width: 90%; height: auto; max-height: 150px; margin-bottom: 10px;">
+            <!-- Audio Element -->        
+            <audio controls loop>
+                <source src="audio/floating-piano-melodies.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <p style="font-size: 10px;">Audio: Floating Piano Melodies by <a href="https://freesound.org/s/723971/" target="_blank">UNIVERSFIELD</a> — Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC Attribution 4.0</a></p>
+        </div>
+<!-- Cooking Timer iframe Section -->
+        <div class="media-item timer-section">
+            <h3>Set a Cooking Timer</h3>
+            <iframe src="https://123timer.com/" width="100%" height="250"></iframe>
+        </div>
+    </div>
+    
+    <div class="clear"></div> <!-- Clears float after the media items -->
+
+
+<!-- Escape character example -->
+    <footer>
+        <p>&copy; 2024 Autumn Orchard • Enjoy Your Harvest</p>
+    </footer>
+</body>
+</html>

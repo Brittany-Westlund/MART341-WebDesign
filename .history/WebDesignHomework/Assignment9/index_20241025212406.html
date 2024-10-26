@@ -21,7 +21,6 @@
             display: inline-block; /* Ensures the links are treated like blocks within the nav */
         }   
         body {
-            font-family: "Arial", sans-serif;
             background-color: rgb(255, 237, 239);
         }
         h1 {
@@ -36,21 +35,20 @@
             text-align: center;
         }
         .instructions-section {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5%;
-            justify-content: space-around;
+            width: 90%;
+            margin: 0 auto; /* Centers block-level elements, like divs, horizontally - 0 is for the top and bottom values - auto is for the left and right values - auto allows the browser to adjust the space on the left and right automatically */
+            padding: 0 20px 20px 20px; /* Places padding around all sides except the top */
 
         }
         .instruction {
-            width: 31%; /* or adjust as needed */
-            padding: 30px;
-            margin: 17px 0; /* Adds space on the top and bottom */
+            width: 30%; /* Each recipe takes up 30% of the width */
+            float: left;
+            margin: 1.66%; /* Spacing between the recipes */
+            padding: 15px;
             background-color: #f2fcff;
-            box-sizing: border-box;
-            text-align: center;
+            box-sizing: border-box; /* Ensures padding and border are included in width */
+            text-align: center; /* Centers text and images in the recipe div */
         }
-
         .instruction img {
             width: 100%; /* Makes images full width of container */
             height: auto;
@@ -89,36 +87,34 @@
     </style>
 </head>
 <body>
-    <nav>
-        <a style="float: right; padding: 10px" href="index.html">HOME</a>
-        <a style="float: right; padding: 10px" href="activities.html">ACTIVITIES</a>
-        <a style="float: right; padding: 10px" href="recipes.html">RECIPES</a>
 
-        <h4 style="text-align: left;">Kindle & Craft</h4>
-        <h2 style="text-align: center;">Illuminate Your Home</h2>
-        <h3 style="text-align: center;">How to Create a Succulent Candle in a Glass Jar</h3>     
-            
-        <img src="images/green_hexagonal_candle.jpg" width="33%"/>
-        <img src="images/succulent_candle_sideview.jpg" width="33%"/>
-        <img src="images/flower_detail_candle.jpg" width="33%"/>
-    </nav>
+    <a style="float: right; padding: 10px" href="index.html">HOME</a>
+    <a style="float: right; padding: 10px" href="activities.html">ACTIVITIES</a>
+    <a style="float: right; padding: 10px" href="recipes.html">RECIPES</a>
+
+    <h1 style="text-align: left;">Kindle & Craft</h1>
+    <h2 style="text-align: center;">Illuminate Your Home</h2>
+    <h3 style="text-align: center;">How to Create a Succulent Candle in a Glass Jar</h3>     
+        
+    <img src="images/green_hexagonal_candle.jpg" width="33%"/>
+    <img src="images/succulent_candle_sideview.jpg" width="33%"/>
+    <img src="images/flower_detail_candle.jpg" width="33%"/>
 
     <br>
     <br>
         
-            <p style="width: 70%; margin: auto; padding-bottom: 10px;">Creating a succulent candle is a fun and creative way to bring the charm of nature indoors, blending the beauty of succulents with the soothing glow of a candle. With a clear glass jar and carefully chosen wax, each candle is crafted to look like a miniature succulent garden.</p>
+            <p style="width: 80%; margin: auto;">Creating a succulent candle is a fun and creative way to bring the charm of nature indoors, blending the beauty of succulents with the soothing glow of a candle. With a clear glass jar and carefully chosen wax, each candle is crafted to look like a miniature succulent garden.</p>
 
             <br>
-            <hr style="width: 40%; margin: auto;"/>
                 
-            <p style="width: 70%; margin: auto; padding-top: 20px;">Using molds, natural dyes, and essential oils, you can personalize your candle with scents and colors that reflect your style. The result is a beautiful, handmade piece that adds warmth, tranquility, and a touch of nature to any space – perfect as a gift or a unique addition to your own home decor.</p>
+            <p style="width: 80%; margin: auto;">Using molds, natural dyes, and essential oils, you can personalize your candle with scents and colors that reflect your style. The result is a beautiful, handmade piece that adds warmth, tranquility, and a touch of nature to any space – perfect as a gift or a unique addition to your own home decor.</p>
     <br>
 
     <!-- Materials -->
     <div class="materials-section">
 
         <div class="materials-section">
-            <img src="images/succulent_candle_topview_banner.jpg" alt="" width="100%" height="auto">
+            <img src="images/flower_detail_candle.jpg" alt="" width="100%" height="auto">
             <h2>Materials</h2>
             <ul class="materials-list">
                 <li>Glass jar (clear)</li>
@@ -142,7 +138,7 @@
 
         <div class="instruction">
             <h1>1</h1>
-            <img src="images/candle_workspace.jpg" alt="A workspace set up with candle materials.">
+            <img src="images/flower_detail_candle.jpg" alt="A freshly baked pecan pie">
             <h3>Prepare Your Workspace</h3>
             <p>Clear a flat surface and gather your materials. Lay down newspaper or a drop cloth to protect your workspace from wax spills.</p>
             
@@ -150,7 +146,7 @@
 
         <div class="instruction">
             <h1>2</h1>
-            <img src="images/flower_detail_candle.jpg" alt="A close-up of a cotton candle wick.">
+            <img src="images/flower_detail_candle.jpg" alt="A freshly baked pecan pie">
             <h3>Choose Your Wick</h3>
             <p>Decide between a cotton wick or a wood wick.
                 Cotton wicks are easy to work with while wood wicks create a cozy crackling sound.</p>
@@ -158,74 +154,75 @@
 
         <div class="instruction">
             <h1>3</h1>
-            <img src="images/candle_supplies_pot.jpg" alt="An image of various candle-making supplies including a pot.">
+            <img src="images/flower_detail_candle.jpg" alt="A freshly baked pecan pie">
             <h3>Melt the Wax</h3>
             <p>In a double boiler, heat wax over water on medium. In a microwave, heat wax in a safe container in 30-second intervals.</p>
         </div>
 
         <div class="instruction">
             <h1>4</h1>
-            <img src="images/candle_oil.jpg" alt="A candle and oil bottles.">
+            <img src="images/flower_detail_candle.jpg" alt="A freshly baked pecan pie">
             <h3>Add Fragrance and Color</h3>
-            <p>Add essential oils and color to the wax. Stir well to combine. Follow the recommended usage rate for your chosen wax type.</p>
+            <p>Add essential oils and color dye to the melted wax. Stir well to combine. Follow the recommended usage rate for your chosen wax type.</p>
         </div>
 
         <div class="instruction">
             <h1>5</h1>
-            <img src="images/candle_wick.jpg" alt="A freshly baked pecan pie">
+            <img src="images/flower_detail_candle.jpg" alt="A freshly baked pecan pie">
             <h3>Secure the Wick</h3>
             <p>Attach base of wick to the center of jar using a sticker and metal holder. This helps keep the wick in place when pouring the wax.</p>
         </div>
 
         <div class="instruction">
             <h1>6</h1>
-            <img src="images/succulents.jpg" alt="A freshly baked pecan pie">
+            <img src="images/flower_detail_candle.jpg" alt="A freshly baked pecan pie">
             <h3>Prepare the Succulents</h3>
             <p>Use a silicone mold to create a variety of wax succulents. Fill the succulent molds with melted wax and let set for at least 30 min.</p>
         </div>
 
         <div class="instruction">
             <h1>7</h1>
-            <img src="images/candle_materials.jpg" alt="A close up of flower details ">
+            <img src="images/flower_detail_candle.jpg" alt="A freshly baked pecan pie">
             <h3>Pour the Wax</h3>
-            <p>Once wax reaches desired temp, slowly pour into glass jar. Leave space for the succulents. Ensure the wick stays centered.</p>
+            <p>Once wax reaches desired temperature, slowly pour into glass jar. Leave space at the top for the succulents. Ensure the wick stays centered.</p>
         </div>
 
         <div class="instruction">
             <h1>8</h1>
-            <img src="images/succulent_candle_topview.jpg" alt="A closeup of wax succulents">
+            <img src="images/flower_detail_candle.jpg" alt="A freshly baked pecan pie">
             <h3>Add the Succulents</h3>
             <p>Allow the wax to cool slightly but not fully harden (about 140°F or 60°C). Then, carefully set the succulents into the wax.</p>
         </div>
 
         <div class="instruction">
             <h1>9</h1>
-            <img src="images/succulent_candle_sideview.jpg" alt="A sideview of a succulent candle.">
+            <img src="images/flower_detail_candle.jpg" alt="A freshly baked pecan pie">
             <h3>Finish Pouring</h3>
-            <p>If needed, you can pour a little more wax to cover the bases of the succulents to secure them in place. Ensure wick remains centered.</p>
+            <p>If needed, you can pour a little more wax to cover the bases of the succulents to secure them in place. Ensure the wick remains centered.</p>
         </div>
 
         <div class="instruction">
             <h1>10</h1>
-            <img src="images/green_candle_closeup.jpg" alt="A closeup of a green succulent candle.">
+            <img src="images/flower_detail_candle.jpg" alt="A freshly baked pecan pie">
             <h3>Let It Set</h3>
-            <p>Let the candle cool and harden fully at room temperature, which may take several hours. Avoid moving the candle.</p>
+            <p>Let the candle cool and harden fully at room temperature, which may take several hours. Avoid moving the candle for an even surface.</p>
         </div>
 
         <div class="instruction">
             <h1>11</h1>
-            <img src="images/trimmed_wick.jpg" alt="A freshly trimmed wood wick.">
+            <img src="images/flower_detail_candle.jpg" alt="A freshly baked pecan pie">
             <h3>Trim the Wick</h3>
             <p>After the candle has fully set, trim the wick to about 1/4 inch above the wax surface. This length promotes an even burn and reduces smoke.</p>
         </div>
 
         <div class="instruction">
             <h1>12</h1>
-            <img src="images/succulent_candle_nature_background.jpg" alt="A succulent candle in a jar with sage.">
+            <img src="images/flower_detail_candle.jpg" alt="A freshly baked pecan pie">
             <h3>Enjoy Your Candle</h3>
             <p>Light your new succulent candle and enjoy the ambiance it creates! Remember to always monitor the candle while it burns.</p>
         </div>
 
+        <div class="clear"></div> <!-- Clears the float after recipe items -->
     </div>
         
  <!-- Tips -->
@@ -241,9 +238,9 @@
     </div>
  
 <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Kindle & Craft</p>
-    </footer>
+ <footer>
+    <p>&copy; 2024 Autumn Orchard • Enjoy Your Harvest</p>
+</footer>
             
 </body>
 </html>

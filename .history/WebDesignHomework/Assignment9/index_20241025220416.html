@@ -21,7 +21,6 @@
             display: inline-block; /* Ensures the links are treated like blocks within the nav */
         }   
         body {
-            font-family: "Arial", sans-serif;
             background-color: rgb(255, 237, 239);
         }
         h1 {
@@ -36,21 +35,20 @@
             text-align: center;
         }
         .instructions-section {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5%;
-            justify-content: space-around;
+            width: 90%;
+            margin: 0 auto; /* Centers block-level elements, like divs, horizontally - 0 is for the top and bottom values - auto is for the left and right values - auto allows the browser to adjust the space on the left and right automatically */
+            padding: 0 20px 20px 20px; /* Places padding around all sides except the top */
 
         }
         .instruction {
-            width: 31%; /* or adjust as needed */
-            padding: 30px;
-            margin: 17px 0; /* Adds space on the top and bottom */
+            width: 30%; /* Each recipe takes up 30% of the width */
+            float: left;
+            margin: 1.66%; /* Spacing between the recipes */
+            padding: 15px;
             background-color: #f2fcff;
-            box-sizing: border-box;
-            text-align: center;
+            box-sizing: border-box; /* Ensures padding and border are included in width */
+            text-align: center; /* Centers text and images in the recipe div */
         }
-
         .instruction img {
             width: 100%; /* Makes images full width of container */
             height: auto;
@@ -89,19 +87,18 @@
     </style>
 </head>
 <body>
-    <nav>
-        <a style="float: right; padding: 10px" href="index.html">HOME</a>
-        <a style="float: right; padding: 10px" href="activities.html">ACTIVITIES</a>
-        <a style="float: right; padding: 10px" href="recipes.html">RECIPES</a>
 
-        <h4 style="text-align: left;">Kindle & Craft</h4>
-        <h2 style="text-align: center;">Illuminate Your Home</h2>
-        <h3 style="text-align: center;">How to Create a Succulent Candle in a Glass Jar</h3>     
-            
-        <img src="images/green_hexagonal_candle.jpg" width="33%"/>
-        <img src="images/succulent_candle_sideview.jpg" width="33%"/>
-        <img src="images/flower_detail_candle.jpg" width="33%"/>
-    </nav>
+    <a style="float: right; padding: 10px" href="index.html">HOME</a>
+    <a style="float: right; padding: 10px" href="activities.html">ACTIVITIES</a>
+    <a style="float: right; padding: 10px" href="recipes.html">RECIPES</a>
+
+    <h1 style="text-align: left;">Kindle & Craft</h1>
+    <h2 style="text-align: center;">Illuminate Your Home</h2>
+    <h3 style="text-align: center;">How to Create a Succulent Candle in a Glass Jar</h3>     
+        
+    <img src="images/green_hexagonal_candle.jpg" width="33%"/>
+    <img src="images/succulent_candle_sideview.jpg" width="33%"/>
+    <img src="images/flower_detail_candle.jpg" width="33%"/>
 
     <br>
     <br>
@@ -202,7 +199,7 @@
             <h1>9</h1>
             <img src="images/succulent_candle_sideview.jpg" alt="A sideview of a succulent candle.">
             <h3>Finish Pouring</h3>
-            <p>If needed, you can pour a little more wax to cover the bases of the succulents to secure them in place. Ensure wick remains centered.</p>
+            <p>If needed, you can pour a little more wax to cover the bases of the succulents to secure them in place. Ensure the wick remains centered.</p>
         </div>
 
         <div class="instruction">
@@ -226,6 +223,7 @@
             <p>Light your new succulent candle and enjoy the ambiance it creates! Remember to always monitor the candle while it burns.</p>
         </div>
 
+        <div class="clear"></div> <!-- Clears the float after recipe items -->
     </div>
         
  <!-- Tips -->
@@ -241,9 +239,9 @@
     </div>
  
 <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Kindle & Craft</p>
-    </footer>
+ <footer>
+    <p>&copy; 2024 Autumn Orchard • Enjoy Your Harvest</p>
+</footer>
             
 </body>
 </html>
