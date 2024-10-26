@@ -81,8 +81,19 @@
         .special-note {
             font-weight: bold;
         }
-       
-        
+
+        .video-banner {
+            width: 100%; /* Full viewport width */
+            overflow: hidden;
+            margin: auto;
+        }
+
+        .video-banner video {
+            width: 100%; /* Makes the video full width */
+            height: auto; /* Maintains aspect ratio */
+            object-fit: cover; /* Crops the video to fill the container */
+        }
+
     </style>
 </head>
 <body>
@@ -246,6 +257,12 @@
             <li>Always check the compatibility of the wax and wick you choose to ensure safe burning.</li>
           </ul>
     </div>
+
+    <div class="video-banner">
+        <video src="videos/candle_video_banner.mp4" autoplay muted loop></video>
+    </div>
+    
+    
  
 <!-- Footer -->
     <footer>
