@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 /* Navigation styling */
@@ -38,9 +38,9 @@ nav ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 4em;
-    letter-spacing: 0.5em;
+    letter-spacing: 1em;
     padding: 20px;
     text-align: center;
 }

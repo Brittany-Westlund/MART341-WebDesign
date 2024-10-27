@@ -1,0 +1,88 @@
+#logo {
+    text-align: left;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+/* General navigation container styling */
+nav {
+    padding: 10px; /* Controls the spacing around the entire nav container */
+    text-align: right; /* Aligns the nav items to the right of the container */
+}
+
+/* Styling the unordered list */
+nav ul {
+    list-style-type: none; /* Removes bullets from the list */
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling each list item */
+nav ul li {
+    display: inline; /* Makes list items sit next to each other */
+    margin-left: 15px; /* Space between each nav item */
+}
+
+/* Styling for each link */
+nav ul li a {
+    text-decoration: none; /* Removes underline for links */
+    color: black; /* Link color */
+    font-weight: bold; /* Bold for emphasis on links */
+}
+   
+body {
+    font-family: "Arial", sans-serif;
+    background-color: rgb(255, 237, 239);
+}
+
+h1 {
+    color: rgb(45, 1, 26); /* Sets the text's color */
+    margin-top: -25px;
+}    
+h2, p {
+    color: rgb(61, 4, 28);
+    text-align: center;
+}
+
+h3 {
+    color: rgb(61, 4, 28);
+    text-align: center;
+}
+
+/* Styling for the full-width banners */
+.banner {
+    width: 100vw; /* Full viewport width */
+    height: 200px; /* Adjust height as needed */
+    background-color: #333; /* Example background color */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+/* Container for two equal-width sections */
+.two-column-block {
+    display: flex;
+    width: 100vw;
+    height: 300px; /* Adjust height as needed */
+    box-sizing: border-box;
+}
+
+/* Individual sections within the two-column block */
+.two-column-block .left-section,
+.two-column-block .right-section {
+    flex: 1; /* Ensures each section takes up 50% of the space */
+    padding: 20px; /* Internal padding */
+    box-sizing: border-box;
+}
+
+/* Optional background colors for sections */
+.left-section {
+    background-color: #f9f9f9; /* Light gray */
+}
+
+.right-section {
+    background-color: #f2fcff; /* Light blue */
+}

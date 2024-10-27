@@ -1,0 +1,181 @@
+#logo {
+    text-align: left;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+/* General navigation container styling */
+nav {
+    padding: 10px; /* Controls the spacing around the entire nav container */
+    text-align: right; /* Aligns the nav items to the right of the container */
+}
+
+/* Styling the unordered list */
+nav ul {
+    list-style-type: none; /* Removes bullets from the list */
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling each list item */
+nav ul li {
+    display: inline; /* Makes list items sit next to each other */
+    margin-left: 15px; /* Space between each nav item */
+}
+
+/* Styling for each link */
+nav ul li a {
+    text-decoration: none; /* Removes underline for links */
+    color: black; /* Link color */
+    font-weight: bold; /* Bold for emphasis on links */
+}
+
+   
+body {
+    font-family: "Arial", sans-serif;
+    background-color: rgb(255, 237, 239);
+}
+
+h1 {
+    color: rgb(45, 1, 26); /* Sets the text's color */
+    margin-top: -25px;
+}    
+h2, p {
+    color: rgb(61, 4, 28);
+    text-align: center;
+}
+
+h3 {
+    color: rgb(61, 4, 28);
+    text-align: center;
+
+/* Container for left and right blocks */
+.left-block,
+.right-block {
+    width: 50vw; /* 50% of the viewport width */
+    height: 100vh; /* Full viewport height */
+    float: left; /* Aligns the blocks side by side */
+    box-sizing: border-box; /* Ensures padding and border don't increase width */
+}
+
+/* Styling for the blocks */
+.left-block {
+    background-color: #f9f9f9; /* Color for the left block */
+    padding: 20px;
+}
+
+.right-block {
+    background-color: #f2fcff; /* Color for the right block */
+    padding: 20px;
+    text-align: center; /* Centers the content inside */
+}
+
+.right-block img {
+    max-width: 100%; /* Makes the image responsive */
+    height: auto;
+}
+
+
+}
+.instructions-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5%;
+    justify-content: space-around;
+
+}
+.instruction {
+    width: 31%; /* or adjust as needed */
+    padding: 15px 30px 30px 30px;
+    margin: 17px 0; /* Adds space on the top and bottom */
+    background-color: #f2fcff;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.instruction img {
+    width: 100%; /* Makes images full width of container */
+    height: auto;
+}
+
+.materials-list {
+    columns: 3; /* Splits the list into three columns */
+    column-gap: 20px; /* Adjusts space between columns */
+    list-style-position: inside;
+    margin: 1.66%;
+    padding: 25px 25px 25px 100px;
+    background-color: #f2fcff;
+    box-sizing: border-box; /* Ensures padding and border are included in width */
+    
+}
+
+.tips-list {
+    columns: 3; /* Splits the list into three columns */
+    column-gap: 20px; /* Adjusts space between columns */
+    list-style-position: inside;
+    margin: 1.66%;
+    padding: 25px 25px 25px 100px;
+    background-color: #f2fcff;
+    box-sizing: border-box; /* Ensures padding and border are included in width */
+    
+}
+
+.special-note {
+    font-weight: bold;
+}
+
+.spacer {
+    display: block;
+    height: 20px; /* Adjust height as needed */
+    width: 100%; /* Ensures it spans full width if needed */
+}
+
+.video-banner {
+    width: 100%; /* Full viewport width */
+    overflow: hidden;
+    margin: auto;
+}
+
+.video-banner video {
+    width: 100%; /* Makes the video full width */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover; /* Crops the video to fill the container */
+}
+
+/* Styling for the full-width banners */
+.banner {
+    width: 100vw; /* Full viewport width */
+    height: 200px; /* Adjust height as needed */
+    background-color: #333; /* Example background color */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+/* Container for two equal-width sections */
+.two-column-block {
+    display: flex;
+    width: 100vw;
+    height: 300px; /* Adjust height as needed */
+    box-sizing: border-box;
+}
+
+/* Individual sections within the two-column block */
+.two-column-block .left-section,
+.two-column-block .right-section {
+    flex: 1; /* Ensures each section takes up 50% of the space */
+    padding: 20px; /* Internal padding */
+    box-sizing: border-box;
+}
+
+/* Optional background colors for sections */
+.left-section {
+    background-color: #f9f9f9; /* Light gray */
+}
+
+.right-section {
+    background-color: #f2fcff; /* Light blue */
+}
