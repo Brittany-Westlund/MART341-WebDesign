@@ -5,7 +5,7 @@
 }
 /* General navigation container styling */
 nav {
-    padding: 10px; /* Controls the spacing around the entire nav container */
+    padding: 0 10px; /* Controls the spacing around the entire nav container */
     text-align: right; /* Aligns the nav items to the right of the container */
 }
 
