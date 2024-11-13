@@ -1,0 +1,85 @@
+/* Resetting margin, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* FAQ Container */
+.faq-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #ffccd5; /* Light pink border */
+    position: relative;
+    opacity: 0.95; /* Slight opacity */
+}
+
+/* ID selector for FAQ section */
+#faq-section {
+    padding-top: 20px;
+    text-align: center; /* Center align text */
+}
+
+/* Title styling */
+.faq-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+/* FAQ Item Styling */
+.faq-item {
+    border-bottom: 1px solid #cccccc; /* Grey border */
+    padding: 15px 0;
+}
+
+/* FAQ Question Styling */
+.faq-question {
+    font-size: 1.2em;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333333;
+}
+
+.faq-question:hover {
+    color: #ffccd5; /* Light pink on hover */
+}
+
+/* Answer Styling */
+.faq-answer {
+    display: none;
+    margin-top: 10px;
+    font-size: 1em;
+    color: #666666; /* Grey text */
+    line-height: 1.5;
+    padding-left: 10px;
+}
+
+/* Display answer when .active is added */
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+/* Toggle Icon */
+.toggle-icon {
+    font-size: 1.5em;
+    transition: transform 0.3s ease;
+    color: #333333;
+}
+
+/* Rotate icon when active */
+.faq-item.active .toggle-icon {
+    transform: rotate(45deg);
+}
