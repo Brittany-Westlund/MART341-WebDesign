@@ -173,7 +173,7 @@ blockquote {
     margin-bottom: 10px;
 }
 
-.quote-author {
+#quote-author {
     font-size: 1em;
     color: #555;
     margin-top: 5px;

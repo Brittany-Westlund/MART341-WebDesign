@@ -26,7 +26,11 @@ nav {
     text-align: center;
     font-family: 'Kitten', sans-serif; /* Falls back to sans-serif if font fails to load */
     letter-spacing: 2px;
-    text-shadow: .4px .4px 0 #000; /* Top-left shadow */
+    text-shadow:
+        2px 2px 0 #000, /* Top-left shadow */
+        -2px -2px 0 #000, /* Bottom-right shadow */
+        2px -2px 0 #000, /* Top-right shadow */
+        -2px 2px 0 #000; /* Bottom-left shadow */
     font-size: 17px;
     border-bottom: 3px dotted #a8858e; /* Dotted border on the bottom */
     position: relative;
@@ -61,7 +65,7 @@ nav ul li a:hover::after {
     top: -3px; /* Move the dotted overline closer to the text */
     left: 0;
     width: 100%;
-    border-top: 2.5px dotted #c7afb5; /* Dotted line above the text */
+    border-top: 2.5px dotted #dfccd1; /* Dotted line above the text */
 }
 
 h1 {
@@ -98,7 +102,7 @@ h1 {
 /* Two-column block styling */
 .two-column-block {
     display: flex;
-    overflow: auto; /* Allow scrolling if content overflows */
+    overflow: hidden; /* Don't allow content to exceed boundaries (clips content) */
 }
 
 .two-column-block div {
@@ -110,7 +114,7 @@ h1 {
 /* Two-column gallery styling */
 .two-column-gallery {
     display: flex;
-    overflow: auto;
+    overflow: hidden; /* Don't allow content to exceed boundaries (clips content) */
 }
 
 .two-column-gallery div {
@@ -173,7 +177,7 @@ blockquote {
     margin-bottom: 10px;
 }
 
-.quote-author {
+#quote-author {
     font-size: 1em;
     color: #555;
     margin-top: 5px;

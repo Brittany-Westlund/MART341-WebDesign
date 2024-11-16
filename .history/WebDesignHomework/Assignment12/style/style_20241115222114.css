@@ -24,10 +24,9 @@ nav {
     background-color: #fefefe;
     padding: 10px;
     text-align: center;
-    font-family: 'Kitten', sans-serif; /* Falls back to sans-serif if font fails to load */
+    font-family: arvo, sans-serif;
     letter-spacing: 2px;
-    text-shadow: .4px .4px 0 #000; /* Top-left shadow */
-    font-size: 17px;
+    font-size: 13px;
     border-bottom: 3px dotted #a8858e; /* Dotted border on the bottom */
     position: relative;
     margin-bottom: 6px;
@@ -61,31 +60,26 @@ nav ul li a:hover::after {
     top: -3px; /* Move the dotted overline closer to the text */
     left: 0;
     width: 100%;
-    border-top: 2.5px dotted #c7afb5; /* Dotted line above the text */
+    border-top: 2.5px dotted #dfccd1; /* Dotted line above the text */
 }
 
 h1 {
-    font-family: 'Kitten', sans-serif; /* Falls back to sans-serif if font fails to load */
+    font-family: arvo, sans-serif;
     letter-spacing: 2px;
 }
 
 /* Dark gray banner styling */
 .banner {
     height: 200px;
-    background-color: rgb(95, 139, 140);
+    background-color: #333;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 3.6em;
-    font-family: 'Kitten', sans-serif;
+    font-size: 3.3em;
+    font-family: arvo;
     text-align: center;
     letter-spacing: 0.2em;
-    text-shadow:
-        1.5px 1.5px 0 hsl(0, 0%, 100%),   /* Top-left shadow */
-        -1.5px -1.5px 0 hsl(0, 0%, 100%), /* Bottom-right shadow */
-        1.5px -1.5px 0 hsl(0, 0%, 100%),  /* Top-right shadow */
-        -1.5px 1.5px 0 hsl(0, 0%, 100%);  /* Bottom-left shadow */
 }
 
 /* Banner image styling */
@@ -98,7 +92,7 @@ h1 {
 /* Two-column block styling */
 .two-column-block {
     display: flex;
-    overflow: auto; /* Allow scrolling if content overflows */
+    overflow: hidden; /* Don't allow content to exceed boundaries (clips content) */
 }
 
 .two-column-block div {
@@ -110,7 +104,7 @@ h1 {
 /* Two-column gallery styling */
 .two-column-gallery {
     display: flex;
-    overflow: auto;
+    overflow: hidden; /* Don't allow content to exceed boundaries (clips content) */
 }
 
 .two-column-gallery div {
@@ -138,20 +132,12 @@ h1 {
 }
 
 .middle-section {
-    display: flex; /* Flexbox layout */
+    
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
     padding: 20px; /* Adjust the padding */
-    width: 33%;
-    height: auto;
     background-color: #f0f0f0; /* Add background color */
     text-align: center; /* Center text inside the div */
-}
-
-/* Style for the centered graphic */
-.centered-graphic {
-    max-width: 100%; /* Make sure image does not overflow */
-    height: auto; /* Maintain aspect ratio */
 }
 
 .right-section {
@@ -173,7 +159,7 @@ blockquote {
     margin-bottom: 10px;
 }
 
-.quote-author {
+#quote-author {
     font-size: 1em;
     color: #555;
     margin-top: 5px;
