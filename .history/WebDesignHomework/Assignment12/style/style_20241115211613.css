@@ -24,15 +24,14 @@ nav {
     background-color: #fefefe;
     padding: 10px;
     text-align: center;
-    font-family: arvo, sans-serif;
+    font-family: arvo,  sans-serif;
     letter-spacing: 2px;
     font-size: 13px;
     border-bottom: 3px dotted #a8858e; /* Dotted border on the bottom */
+    letter-spacing: 5px; /* Adjusts spacing between dots */
     position: relative;
-    margin-bottom: 6px;
 }
 
-/* Styling for the list in the navigation */
 nav ul {
     list-style-type: none;
     display: flex;
@@ -40,27 +39,30 @@ nav ul {
     gap: 20px;
 }
 
-/* Styling for the links inside the navigation */
 nav ul li a {
     color: #4f3d3d;
     text-decoration: none;
     transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
-    position: relative; /* Required for positioning the pseudo-element */
 }
 
-/* Hover effect - Dotted overline above text */
+/* Hover effect */
 nav ul li a:hover {
     color: #a8858e; /* Change color on hover */
+    text-decoration: overline; /* Add overline on hover for cleaner look */
+    text-decoration-style: dotted; /* Make the overline dotted */
+    text-decoration-color: #a8858e; /* Set the color of the overline */
 }
 
-/* Add the dotted overline only on hover */
+/* Hover overline styling */
 nav ul li a:hover::after {
+    color: #a8858e; /* Change color on hover */
+    text-decoration: overline; /* Add overline on hover for cleaner look */
     content: ""; /* Required for the pseudo-element */
     position: absolute;
-    top: -3px; /* Move the dotted overline closer to the text */
+    bottom: 0; /* Position it just above the text */
     left: 0;
     width: 100%;
-    border-top: 2.5px dotted #dfccd1; /* Dotted line above the text */
+    border-bottom: 2px dotted #000; /* Dotted line */
 }
 
 h1 {

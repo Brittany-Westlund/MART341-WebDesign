@@ -24,15 +24,11 @@ nav {
     background-color: #fefefe;
     padding: 10px;
     text-align: center;
-    font-family: arvo, sans-serif;
+    font-family: arvo,  sans-serif;
     letter-spacing: 2px;
     font-size: 13px;
-    border-bottom: 3px dotted #a8858e; /* Dotted border on the bottom */
-    position: relative;
-    margin-bottom: 6px;
 }
 
-/* Styling for the list in the navigation */
 nav ul {
     list-style-type: none;
     display: flex;
@@ -40,27 +36,16 @@ nav ul {
     gap: 20px;
 }
 
-/* Styling for the links inside the navigation */
 nav ul li a {
     color: #4f3d3d;
     text-decoration: none;
     transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
-    position: relative; /* Required for positioning the pseudo-element */
 }
 
-/* Hover effect - Dotted overline above text */
+/* Hover effect */
 nav ul li a:hover {
     color: #a8858e; /* Change color on hover */
-}
-
-/* Add the dotted overline only on hover */
-nav ul li a:hover::after {
-    content: ""; /* Required for the pseudo-element */
-    position: absolute;
-    top: -3px; /* Move the dotted overline closer to the text */
-    left: 0;
-    width: 100%;
-    border-top: 2.5px dotted #dfccd1; /* Dotted line above the text */
+    text-decoration: overline; /* Add overline on hover for cleaner look */
 }
 
 h1 {
@@ -92,7 +77,6 @@ h1 {
 /* Two-column block styling */
 .two-column-block {
     display: flex;
-    overflow: hidden; /* Don't allow content to exceed boundaries (clips content) */
 }
 
 .two-column-block div {
@@ -101,10 +85,8 @@ h1 {
     text-align: center;
 }
 
-/* Two-column gallery styling */
 .two-column-gallery {
     display: flex;
-    overflow: hidden; /* Don't allow content to exceed boundaries (clips content) */
 }
 
 .two-column-gallery div {
@@ -114,10 +96,8 @@ h1 {
     text-align: center;
 }
 
-/* Three-column gallery styling */
 .three-column-gallery {
     display: flex;
-    overflow: hidden; /* Don't allow content to exceed boundaries (clips content) */
 }
 
 .three-column-gallery div {
@@ -128,15 +108,15 @@ h1 {
 }
 
 .left-section {
-    background-color: #ffffff;
+    background-color: #d1c4c9;
 }
 
 .middle-section {
-    background-color: #bca8b0;
+    background-color: #d1c4c9;
 }
 
 .right-section {
-    background-color: #e3dada;
+    background-color: #f8f8f8;
 }
 
 .about-section {

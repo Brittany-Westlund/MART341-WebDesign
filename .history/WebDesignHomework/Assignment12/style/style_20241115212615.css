@@ -28,8 +28,11 @@ nav {
     letter-spacing: 2px;
     font-size: 13px;
     border-bottom: 3px dotted #a8858e; /* Dotted border on the bottom */
+    border-bottom-width: 30px; /* Sets the thickness of the bottom border */
+    border-bottom-style: dotted; /* Dotted style */
+    border-bottom-color: #a8858e; /* Color for the border */
     position: relative;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
 }
 
 /* Styling for the list in the navigation */
@@ -57,10 +60,10 @@ nav ul li a:hover {
 nav ul li a:hover::after {
     content: ""; /* Required for the pseudo-element */
     position: absolute;
-    top: -3px; /* Move the dotted overline closer to the text */
+    top: -5px; /* Move the dotted overline closer to the text */
     left: 0;
     width: 100%;
-    border-top: 2.5px dotted #dfccd1; /* Dotted line above the text */
+    border-top: 2.5px dotted #a8858e; /* Dotted line above the text */
 }
 
 h1 {
