@@ -1,0 +1,316 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Kitten';
+    src: url('fonts/Kitten.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    font-family: 'Kitten', sans-serif; /* Falls back to sans-serif if font fails to load */
+    text-shadow: 0.25px 0.25px 0 #000; /* Creates a thin shadow outline */
+    font-size: 1.05em; /* Slightly increase font size to give a bolder effect */
+}
+
+/* Navigation styling */
+nav {
+    background-color: #fefefe;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Kitten', sans-serif; /* Falls back to sans-serif if font fails to load */
+    letter-spacing: 2px;
+    text-shadow: .4px .4px 0 #000; /* Top-left shadow */
+    font-size: 17px;
+    border-bottom: 3px dotted #a8858e; /* Dotted border on the bottom */
+    position: relative;
+    margin-bottom: 6px;
+}
+
+/* Styling for the list in the navigation */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Styling for the links inside the navigation */
+nav ul li a {
+    color: #4f3d3d;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+    position: relative; /* Required for positioning the pseudo-element */
+}
+
+/* Hover effect - Dotted overline above text */
+nav ul li a:hover {
+    color: #a8858e; /* Change color on hover */
+}
+
+/* Add the dotted overline only on hover */
+nav ul li a:hover::after {
+    content: ""; /* Required for the pseudo-element */
+    position: absolute;
+    top: -3px; /* Move the dotted overline closer to the text */
+    left: 0;
+    width: 100%;
+    border-top: 2.5px dotted #c7afb5; /* Dotted line above the text */
+}
+
+h1 {
+    font-family: 'Kitten', sans-serif; /* Falls back to sans-serif if font fails to load */
+    letter-spacing: 2px;
+}
+
+/* Dark gray banner styling */
+.banner {
+    height: 200px;
+    background-color: rgb(105, 139, 143);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.6em;
+    font-family: 'Kitten', sans-serif;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-shadow:
+        1.5px 1.5px 0 hsl(0, 0%, 100%),   /* Top-left shadow */
+        -1.5px -1.5px 0 hsl(0, 0%, 100%), /* Bottom-right shadow */
+        1.5px -1.5px 0 hsl(0, 0%, 100%),  /* Top-right shadow */
+        -1.5px 1.5px 0 hsl(0, 0%, 100%);  /* Bottom-left shadow */
+}
+
+/* Banner image styling */
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Two-column block styling */
+.two-column-block {
+    display: flex;
+    overflow: auto; /* Allow scrolling if content overflows */
+}
+
+.two-column-block div {
+    flex: 1;
+    padding: 90px;
+    text-align: center;
+}
+
+/* Two-column gallery styling */
+.two-column-gallery {
+    display: flex;
+    overflow: auto;
+}
+
+.two-column-gallery div {
+    flex: 1;
+    height: 300px;
+    padding: 120px 80px 60px 60px;
+    text-align: center;
+}
+
+/* Three-column gallery styling */
+.three-column-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allows content to wrap to the next line */
+    overflow: hidden; /* Don't allow content to exceed boundaries (clips content) */
+}
+
+.three-column-gallery div {
+    flex: 1;
+    height: 300px;
+    padding: 100px 80px 50px 50px;
+    text-align: center;
+}
+
+.left-section {
+    background-color: #ffffff;
+} 
+
+.middle-section {
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    padding: 20px; /* Adjust the padding */
+    width: 33%;
+    height: auto;
+    background-color: #f0f0f0; /* Add background color */
+    text-align: center; /* Center text inside the div */
+}
+
+/* Style for the centered graphic */
+.centered-graphic {
+    max-width: 100%; /* Make sure image does not overflow */
+    min-width: 200px;
+    height: auto;
+    padding-bottom: 50px;
+    padding-left: 15px;
+}
+
+.right-section {
+    background-color: #e3dada;
+}
+
+.about-section {
+    max-width: 800px; /* Limits the width for readability */
+    margin: 0 auto; /* Centers the section horizontally */
+    padding: 20px; /* Adds space inside the section */
+    text-align: center; /* Centers the text */
+    line-height: 1.6; /* Improves readability */
+}
+
+/* Styling for blockquote and author */
+blockquote {
+    font-size: clamp(1em, 1.7vw, 1.7em); /* Minimum: 0.8rem, Preferred: 1.5vw, Maximum: 1.2rem */
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.quote-author {
+    font-size: 1em;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* Full-width video styling */
+.full-width-video {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Footer styling */
+footer {
+    background-color:rgb(89, 120, 123);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+}
+
+
+
+
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    blockquote {
+        font-size: 1.6em; /* Adjust font size */
+        font-style: italic; /* Italicize the quote */
+        display: inline-block; /* Prevent blockquote from stretching */
+    }
+
+    .quote-author {
+        display: block; /* Place author name on its own line */
+        font-size: 1.2em; /* Adjust author font size */
+        color: #555; /* Subtle color for the author */
+        margin-top: 5px; /* Space between the quote and author */
+        text-align: center; /* Ensure it’s centered */
+        padding-bottom: 30px;
+    }
+
+    body {
+        font-size: 0.8em; /* Adjust font size for smaller screens */
+    }
+
+    .two-column-block,
+    .two-column-gallery {
+        display: flex;
+        flex-direction: column; /* Stack columns on top of each other */
+        justify-content: center;
+    }
+
+    .two-column-gallery {
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping for smaller screens */
+        justify-content: center; /* Center content horizontally */
+    }
+
+    .three-column-gallery {
+        display: flex; /* Create a row of three columns */
+        justify-content: space-between; /* Spread the columns evenly */
+        align-items: center; /* Center content vertically */
+    }
+    .three-column-gallery div {
+        display: flex; /* Enables Flexbox */
+        align-items: center; /* Vertically Aligns Text */
+        flex: 1 1 100%; /* One item per row */
+        height: auto; /* Allow height to adjust dynamically */
+        padding: 15px; /* Adjust padding for smaller screens */
+        height: 300px;
+    }
+
+    .three-column-gallery .left-section,
+    .three-column-gallery .middle-section,
+    .three-column-gallery .right-section {
+        text-align: center; /* Center-align all content within each column */
+        display: column;
+        flex-direction: column; /* Stack items vertically */
+        justify-content: center; /* Center vertically */
+        padding: 20px; /* Add spacing around the content */
+}
+
+    .centered-graphic {
+        max-width: 100%; /* Make sure image does not overflow */
+        max-height: 100%; 
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation links vertically */
+        gap: 10px;
+    }
+
+    .banner {
+        font-size: 2em; /* Reduce banner text size */
+        height: auto; /* Adjust height for smaller screens */
+        padding: 20px;
+    }
+
+    .right-section {
+        background-color: #e3dada;
+        padding: 0px; /* Reduce padding on very small screens */
+    }
+
+    .left-section {
+        background-color: #ffffff;
+        padding: 0px; /* Reduce padding on very small screens */
+    }
+}
+
+
+
+
+
+@media (max-width: 480px) {
+    .two-column-block,
+    .two-column-gallery {
+        display: flex;
+        flex-direction: column; /* Stack columns on top of each other */
+        justify-content: center;
+    }
+
+    .three-column-gallery div {
+        flex: 1 1 100%; /* Full width for each item */
+        padding: 10px; /* Minimal padding */
+        flex-direction: column; /* Stack columns on top of each other */
+    }
+
+    
+
+    .about-section {
+        padding: 10px; /* Adjust text padding */
+    }
+}

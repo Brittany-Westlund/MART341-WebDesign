@@ -1,0 +1,169 @@
+/* RESET DEFAULT STYLES */
+/* Resets default browser styles to ensure consistency across all browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Includes padding and borders in the element's dimensions */
+}
+
+/* CUSTOM FONT SETUP */
+/* Load and define the custom font 'Kitten' */
+@font-face {
+    font-family: 'Kitten';
+    src: url('fonts/Kitten.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* GLOBAL BODY STYLING */
+/* Applies styles to the entire webpage */
+body {
+    font-family: 'Kitten', sans-serif; /* Use custom font, fallback to sans-serif if unavailable */
+    text-shadow: 0.25px 0.25px 0 #000; /* Subtle shadow for text */
+    font-size: 1.05em; /* Slightly increase font size for better readability */
+}
+
+/* NAVIGATION BAR STYLING */
+nav {
+    background-color: #fefefe; /* Light background color */
+    padding: 10px; /* Add padding around the nav content */
+    text-align: center; /* Center-aligns the navigation text */
+    font-family: 'Kitten', sans-serif; /* Ensures the nav uses the custom font */
+    letter-spacing: 2px; /* Adds space between letters */
+    text-shadow: 0.4px 0.4px 0 #000; /* Subtle shadow for text */
+    font-size: 17px; /* Adjust font size for readability */
+    border-bottom: 3px dotted #a8858e; /* Decorative dotted border at the bottom */
+    margin-bottom: 6px; /* Add space below the nav bar */
+}
+
+/* Navigation List Styling */
+nav ul {
+    list-style-type: none; /* Remove bullet points from the list */
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: center; /* Centers the navigation links */
+    gap: 20px; /* Adds spacing between nav links */
+}
+
+/* Navigation Link Styling */
+nav ul li a {
+    color: #4f3d3d; /* Dark brown text color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+nav ul li a:hover {
+    color: #a8858e; /* Light brown on hover */
+}
+
+/* HEADER BANNER STYLING */
+.banner {
+    height: 200px; /* Fixed height for the banner */
+    background-color: rgb(105, 139, 143); /* Gray-green background */
+    color: white; /* White text for contrast */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center-aligns vertically */
+    justify-content: center; /* Center-aligns horizontally */
+    font-size: 3.6em; /* Large font size for the banner text */
+    letter-spacing: 0.2em; /* Adds space between letters */
+}
+
+/* TWO-COLUMN BLOCK STYLING */
+/* Creates a layout with two columns of equal width */
+.two-column-block {
+    display: flex; /* Flexbox for side-by-side layout */
+    overflow: auto; /* Adds scroll if content overflows */
+}
+
+/* Styling for each column in the two-column layout */
+.two-column-block div {
+    flex: 1; /* Each column gets equal width */
+    padding: 90px; /* Add padding around column content */
+    text-align: center; /* Center-aligns text in each column */
+}
+
+/* THREE-COLUMN GALLERY STYLING */
+/* Creates a layout with three equally spaced columns */
+.three-column-gallery {
+    display: flex; /* Flexbox for horizontal layout */
+    flex-wrap: wrap; /* Wraps content to a new row if necessary */
+    justify-content: space-between; /* Space out columns evenly */
+    align-items: center; /* Vertically align content */
+}
+
+/* Styling for each column in the three-column gallery */
+.three-column-gallery div {
+    flex: 1; /* Equal width for all columns */
+    height: 300px; /* Fixed height for consistency */
+    padding: 50px; /* Add padding inside each column */
+    display: flex; /* Flexbox for content alignment */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    text-align: center; /* Center-align text horizontally */
+}
+
+/* Styling for blockquote text (quotes) */
+blockquote {
+    font-size: clamp(1em, 2vw, 1.9em); /* Responsive font size */
+    font-style: italic; /* Italicized text for quotes */
+    margin-bottom: 10px; /* Space below the quote */
+}
+
+/* Styling for quote authors (names below quotes) */
+.quote-author {
+    font-size: 0.8em; /* Smaller font size for the author's name */
+    color: #555; /* Subtle gray color for author's text */
+    margin-top: 5px; /* Add space above the author's name */
+    text-align: center; /* Center-aligns the author's name */
+}
+
+/* CENTERED GRAPHIC STYLING */
+.centered-graphic {
+    max-width: 100%; /* Ensures the image doesn’t overflow */
+    min-width: 200px; /* Sets a minimum width to prevent the image from getting too small */
+    height: auto; /* Maintains aspect ratio */
+    padding-bottom: 50px; /* Add space below the image */
+    padding-left: 15px; /* Slight left padding for alignment */
+}
+
+/* FOOTER STYLING */
+footer {
+    background-color: rgb(89, 120, 123); /* Gray-green background */
+    color: white; /* White text for contrast */
+    text-align: center; /* Center-aligns footer content */
+    font-weight: bold; /* Makes text bold */
+    padding: 20px; /* Adds space around the footer text */
+}
+
+/* RESPONSIVE DESIGN - MEDIA QUERIES */
+/* For screen sizes 768px or smaller (tablets) */
+@media (max-width: 768px) {
+    body {
+        font-size: 0.9em; /* Slightly smaller font size */
+    }
+
+    .two-column-block,
+    .three-column-gallery {
+        flex-direction: column; /* Stacks columns vertically */
+    }
+
+    .three-column-gallery div {
+        flex: 1 1 100%; /* Each column takes full width */
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+}
+
+/* For screen sizes 480px or smaller (smartphones) */
+@media (max-width: 480px) {
+    blockquote {
+        font-size: 1.2em; /* Smaller font size for quotes */
+    }
+
+    .quote-author {
+        font-size: 0.7em; /* Smaller font size for author's name */
+    }
+
+    .three-column-gallery div {
+        flex: 1 1 100%; /* Each column takes full width */
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+}

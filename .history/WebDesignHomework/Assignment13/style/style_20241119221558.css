@@ -1,0 +1,234 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's dimensions */
+}
+
+/* Load custom font */
+@font-face {
+    font-family: 'Kitten';
+    src: url('fonts/Kitten.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Global body styling */
+body {
+    font-family: 'Kitten', sans-serif; /* Fallback to sans-serif if 'Kitten' fails to load */
+    text-shadow: 0.25px 0.25px 0 #000; /* Subtle text shadow */
+    font-size: 1.05em; /* Slightly larger than default font size */
+}
+
+/* Navigation bar */
+nav {
+    background-color: #fefefe;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Kitten', sans-serif; /* Custom font for nav */
+    letter-spacing: 2px;
+    text-shadow: 0.4px 0.4px 0 #000; /* Subtle shadow */
+    font-size: 17px;
+    border-bottom: 3px dotted #a8858e; /* Decorative border */
+    margin-bottom: 6px;
+}
+
+/* Navigation links */
+nav ul {
+    list-style-type: none; /* Remove default list bullets */
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between nav items */
+}
+
+nav ul li a {
+    color: #4f3d3d; /* Dark brown text */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+nav ul li a:hover {
+    color: #a8858e; /* Light brown on hover */
+}
+
+nav ul li a:hover::after {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 100%;
+    border-top: 2.5px dotted #c7afb5; /* Decorative overline */
+}
+
+/* Banner/header styling */
+.banner {
+    height: 200px;
+    background-color: rgb(105, 139, 143); /* Gray-green background */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.6em; /* Large banner text */
+    letter-spacing: 0.2em; /* Extra space between letters */
+    text-shadow: 1.5px 1.5px 0 hsl(0, 0%, 100%);
+}
+
+/* Two-column layout */
+.two-column-block {
+    display: flex;
+    overflow: auto; /* Allow horizontal scrolling if needed */
+}
+
+.two-column-block div {
+    flex: 1; /* Equal width for both columns */
+    padding: 90px;
+    text-align: center;
+}
+
+/* Two-column gallery */
+.two-column-gallery {
+    display: flex;
+    overflow: auto;
+}
+
+.two-column-gallery div {
+    flex: 1;
+    height: 300px;
+    padding: 120px 80px 60px 60px; /* Top, right, bottom, left padding */
+    text-align: center;
+}
+
+/* Three-column gallery */
+.three-column-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Wrap columns to the next row if needed */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.three-column-gallery div {
+    flex: 1;
+    height: 300px;
+    padding: 100px 80px 50px 50px; /* Top, right, bottom, left padding */
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+}
+
+/* Left and right sections */
+.left-section {
+    background-color: #ffffff;
+}
+
+.middle-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 33%;
+    height: auto;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.right-section {
+    background-color: #e3dada;
+}
+
+/* Centered graphic */
+.centered-graphic {
+    max-width: 100%; /* Ensure the image does not overflow */
+    min-width: 200px; /* Prevent the image from shrinking too much */
+    height: auto; /* Maintain aspect ratio */
+    padding-bottom: 50px; /* Add space below the image */
+    padding-left: 15px;
+}
+
+/* Blockquote and quote author */
+blockquote {
+    font-size: clamp(1em, 2vw, 1.9em); /* Responsive font size */
+    font-style: italic; /* Italicize quotes */
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.quote-author {
+    font-size: 0.8em; /* Smaller font size */
+    color: #555;
+    margin-top: 5px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: rgb(89, 120, 123); /* Gray-green background */
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+}
+
+/* Responsive Design - Media Queries */
+/* Adjust styles for screen widths 768px or smaller (tablets) */
+@media (max-width: 768px) {
+    blockquote {
+        font-size: 1.6em; /* Larger text for smaller screens */
+    }
+
+    .quote-author {
+        font-size: 1em; /* Adjust author font size */
+        margin-top: 5px;
+    }
+
+    body {
+        font-size: 0.9em; /* Slightly reduce font size */
+    }
+
+    .two-column-block,
+    .two-column-gallery {
+        flex-direction: column; /* Stack columns vertically */
+        justify-content: center;
+    }
+
+    .three-column-gallery div {
+        flex: 1 1 100%; /* Full width for each column */
+        padding: 15px;
+    }
+
+    .centered-graphic {
+        max-width: 100%; /* Adjust for smaller screens */
+        max-height: 100%;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        gap: 10px;
+    }
+
+    .banner {
+        font-size: 2em; /* Reduce banner text size */
+        height: auto;
+        padding: 20px;
+    }
+}
+
+/* Adjust styles for screen widths 480px or smaller (smartphones) */
+@media (max-width: 480px) {
+    blockquote {
+        font-size: 1.2em; /* Smaller quotes */
+    }
+
+    .quote-author {
+        font-size: 0.7em; /* Smaller author names */
+    }
+
+    .three-column-gallery div {
+        flex: 1 1 100%; /* Full width for each item */
+        padding: 10px;
+    }
+
+    .about-section {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+}

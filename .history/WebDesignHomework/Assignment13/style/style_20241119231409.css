@@ -1,0 +1,311 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Kitten';
+    src: url('fonts/Kitten.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    font-family: 'Kitten', sans-serif; /* Falls back to sans-serif if font fails to load */
+    text-shadow: 0.25px 0.25px 0 #000; /* Creates a thin shadow outline */
+    font-size: 1.05em; /* Slightly increase font size to give a bolder effect */
+}
+
+/* Navigation styling */
+/* Base Navigation Styling */
+header {
+    background-color: #26272b;
+    font-family: Verdana, Arial, Tahoma, sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin: 0;
+    height: 2.5em;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Menu Items */
+.menu-item {
+    display: inline-block;
+    margin: 0;
+    min-width: 8em;
+    text-align: center;
+    background-color: #26272b;
+    padding: 0.5em 1em;
+}
+
+.menu-item a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-item:hover {
+    background-color: #1CCDCA;
+}
+
+/* Dropdown Styling */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none; /* Initially hidden */
+    position: absolute;
+    border: 1px solid #000;
+    background-color: #fff;
+    margin-top: 0.5em;
+    z-index: 1;
+    min-width: 8em;
+    text-align: left;
+}
+
+.dropdown-content a {
+    color: #000;
+    padding: 0.5em;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Show on hover */
+}
+
+.dropdown-item:hover,
+.dropdown-item:hover a {
+    color: #baf0ef;
+    background-color: #a2a2a2;
+}
+
+h1 {
+    font-family: 'Kitten', sans-serif; /* Falls back to sans-serif if font fails to load */
+    letter-spacing: 2px;
+}
+
+/* Dark teal banner styling */
+.banner {
+    height: 200px;
+    background-color: rgb(105, 139, 143);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.6em;
+    font-family: 'Kitten', sans-serif;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-shadow:
+        1px 1px 0 hsl(0, 0%, 100%),   /* Top-left shadow */
+        -1px -1px 0 hsl(0, 0%, 100%), /* Bottom-right shadow */
+        1px -1px 0 hsl(0, 0%, 100%),  /* Top-right shadow */
+        -1px 1px 0 hsl(0, 0%, 100%);  /* Bottom-left shadow */
+}
+
+/* Banner image styling */
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Two-column block styling */
+.two-column-block {
+    display: flex;
+    overflow: auto; /* Allow scrolling if content overflows */
+}
+
+.two-column-block div {
+    flex: 1;
+    padding: 90px;
+    text-align: center;
+}
+
+/* Two-column gallery styling */
+.two-column-gallery {
+    display: flex;
+    overflow: auto;
+}
+
+.two-column-gallery div {
+    flex: 1;
+    height: 300px;
+    padding: 120px 80px 60px 60px;
+    text-align: center;
+}
+
+/* Three-column gallery styling */
+.three-column-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allows content to wrap to the next line */
+    overflow: hidden; /* Don't allow content to exceed boundaries (clips content) */
+}
+
+.three-column-gallery div {
+    flex: 1;
+    height: 300px;
+    padding: 100px 80px 50px 50px;
+    text-align: center;
+}
+
+.left-section {
+    background-color: #ffffff;
+} 
+
+.middle-section {
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    padding: 20px; /* Adjust the padding */
+    width: 33%;
+    height: auto;
+    background-color: #f0f0f0; /* Add background color */
+    text-align: center; /* Center text inside the div */
+}
+
+/* Style for the centered graphic */
+.centered-graphic {
+    max-width: 100%; /* Make sure image does not overflow */
+    min-width: 200px;
+    height: auto;
+    padding-bottom: 50px;
+    padding-left: 15px;
+}
+
+.right-section {
+    background-color: #e3dada;
+}
+
+.about-section {
+    max-width: 800px; /* Limits the width for readability */
+    margin: 0 auto; /* Centers the section horizontally */
+    padding: 20px; /* Adds space inside the section */
+    text-align: center; /* Centers the text */
+    line-height: 1.6; /* Improves readability */
+}
+
+/* Styling for blockquote and author */
+blockquote {
+    /* Responsive typography for better scaling on all devices */
+    font-size: clamp(1.1em, 2vw, 1.9em); /* Minimum: 0.8rem, Preferred: 1.5vw, Maximum: 1.2rem */
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.quote-author {
+    font-size: 0.8em;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* Full-width video styling */
+.full-width-video {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Footer styling */
+footer {
+    background-color:rgb(89, 120, 123);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+}
+
+
+
+/* Media Queries for Responsive Design ----------------------------------- */
+/* 768px max width ------------------------------------------------------- */
+
+
+@media (max-width: 768px) {
+    blockquote {
+        font-size: 1.6em;
+    }
+    .quote-author {
+        display: block; /* Place author name on its own line */
+        font-size: 1.2em; /* Adjust author font size */
+        margin-top: 5px; /* Space between the quote and author */
+        padding-bottom: 30px;
+    }
+
+    body {
+        font-size: 0.8em; /* Adjust font size for smaller screens */
+    }
+
+    .two-column-block,
+    .two-column-gallery {
+        flex-direction: column; /* Stack columns on top of each other */
+        justify-content: center;
+    }
+
+    .three-column-gallery {
+        justify-content: space-between; /* Spread the columns evenly */
+    
+    }
+    .three-column-gallery div {
+        align-items: center; /* Vertically Aligns Text */
+        flex: 1 1 100%; /* One item per row */
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .three-column-gallery .left-section,
+    .three-column-gallery .middle-section,
+    .three-column-gallery .right-section {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        justify-content: center; /* Center vertically */
+        padding: 20px; /* Add spacing around the content */
+}
+
+    .centered-graphic {
+        max-width: 100%; /* Make sure image does not overflow */
+        max-height: 100%; 
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack links vertically */
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .dropdown {
+        position: static; /* Inline with parent */
+        box-shadow: none;
+    }
+
+    .banner {
+        font-size: 2em; /* Reduce banner text size */
+        height: auto; /* Adjust height for smaller screens */
+        padding: 20px;
+    }
+}
+
+
+
+/* 480px max width -------------------------------------------------------- */
+
+@media (max-width: 480px) {
+
+    .three-column-gallery div {
+        padding: 10px; /* Minimal padding */
+    }
+
+    .about-section {
+        padding: 10px; /* Adjust text padding */
+    }
+}

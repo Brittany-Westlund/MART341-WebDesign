@@ -1,0 +1,123 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Kitten';
+    src: url('fonts/Kitten.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Kitten', sans-serif; /* Falls back to sans-serif if font fails to load */
+    text-shadow: 0.25px 0.25px 0 #000; /* Creates a thin shadow outline */
+    font-size: 1.05em; /* Slightly increase font size */
+}
+
+/* Navigation styling */
+nav {
+    background-color: #fefefe;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Kitten', sans-serif;
+    letter-spacing: 2px;
+    text-shadow: .4px .4px 0 #000;
+    font-size: 17px;
+    border-bottom: 3px dotted #a8858e;
+    margin-bottom: 6px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #4f3d3d;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: #a8858e;
+}
+
+nav ul li a:hover::after {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 100%;
+    border-top: 2.5px dotted #c7afb5;
+}
+
+/* Banner styling */
+.banner {
+    height: 200px;
+    background-color: rgb(105, 139, 143);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.6em;
+    font-family: 'Kitten', sans-serif;
+    text-shadow: 1.5px 1.5px 0 hsl(0, 0%, 100%);
+}
+
+/* Galleries */
+.three-column-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.three-column-gallery div {
+    flex: 1;
+    height: 300px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    body {
+        font-size: 0.9em;
+    }
+
+    .three-column-gallery {
+        flex-direction: column;
+    }
+
+    .three-column-gallery div {
+        width: 100%;
+        padding: 10px;
+        height: auto;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .banner {
+        font-size: 2em;
+        height: auto;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .three-column-gallery div {
+        padding: 5px;
+        height: auto;
+    }
+}

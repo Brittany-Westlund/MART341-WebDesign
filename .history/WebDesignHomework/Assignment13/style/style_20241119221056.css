@@ -1,0 +1,154 @@
+/* RESET STYLES */
+/* This removes default browser styles to create a consistent starting point for all elements. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's dimensions. */
+}
+
+/* CUSTOM FONT SETUP */
+/* The @font-face rule allows us to include a custom font ("Kitten"). */
+@font-face {
+    font-family: 'Kitten';
+    src: url('fonts/Kitten.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* GLOBAL STYLING */
+/* The body tag applies global styles to the webpage content. */
+body {
+    font-family: 'Kitten', sans-serif; /* Use 'Kitten' font, fallback to sans-serif. */
+    text-shadow: 0.25px 0.25px 0 #000; /* Adds a thin shadow outline to text for subtle emphasis. */
+    font-size: 1.05em; /* Slightly larger than the default font size for better readability. */
+}
+
+/* NAVIGATION BAR STYLING */
+/* Styles for the navigation bar and its contents. */
+nav {
+    background-color: #fefefe; /* White background. */
+    padding: 10px; /* Adds space inside the nav bar. */
+    text-align: center; /* Centers the nav text horizontally. */
+    font-family: 'Kitten', sans-serif; /* Ensures the nav uses the custom font. */
+    letter-spacing: 2px; /* Adds space between letters for a decorative effect. */
+    text-shadow: 0.4px 0.4px 0 #000; /* Slight shadow for the text. */
+    font-size: 17px; /* Font size of the nav items. */
+    border-bottom: 3px dotted #a8858e; /* Dotted underline for the nav bar. */
+    margin-bottom: 6px; /* Adds space below the nav bar. */
+}
+
+/* Styles for the unordered list in the navigation. */
+nav ul {
+    list-style-type: none; /* Removes default bullet points. */
+    display: flex; /* Aligns list items in a horizontal row. */
+    justify-content: center; /* Centers the list items within the nav. */
+    gap: 20px; /* Adds space between each nav item. */
+}
+
+/* Styles for individual navigation links. */
+nav ul li a {
+    color: #4f3d3d; /* Dark brown text color. */
+    text-decoration: none; /* Removes underline from links. */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects. */
+}
+
+/* Hover effect for navigation links. */
+nav ul li a:hover {
+    color: #a8858e; /* Light brown color when hovered. */
+}
+
+/* HEADER STYLING */
+/* Styles for the main banner/header area of the webpage. */
+.banner {
+    height: 200px; /* Fixed height for the banner. */
+    background-color: rgb(105, 139, 143); /* Gray-green background. */
+    color: white; /* White text for contrast. */
+    display: flex; /* Flexbox layout for alignment. */
+    align-items: center; /* Vertically center the text. */
+    justify-content: center; /* Horizontally center the text. */
+    font-size: 3.6em; /* Large font size for the banner text. */
+    letter-spacing: 0.2em; /* Adds extra space between letters for emphasis. */
+}
+
+/* TWO-COLUMN BLOCK STYLING */
+/* This section creates a layout with two equal-width columns. */
+.two-column-block {
+    display: flex; /* Flexbox layout for side-by-side columns. */
+    overflow: auto; /* Adds scroll if content overflows horizontally. */
+}
+
+/* Styling for individual columns in the two-column layout. */
+.two-column-block div {
+    flex: 1; /* Makes each column equal in width. */
+    padding: 90px; /* Adds spacing inside each column. */
+    text-align: center; /* Centers text inside the columns. */
+}
+
+/* THREE-COLUMN GALLERY STYLING */
+/* Creates a layout with three side-by-side columns. */
+.three-column-gallery {
+    display: flex; /* Flexbox layout for the three columns. */
+    flex-wrap: wrap; /* Wraps content to a new line if it overflows. */
+    justify-content: space-between; /* Evenly distributes space between columns. */
+    align-items: center; /* Vertically aligns content within each column. */
+}
+
+/* Styling for each column in the three-column gallery. */
+.three-column-gallery div {
+    flex: 1; /* Each column takes up equal width. */
+    height: 300px; /* Fixed height for consistency. */
+    padding: 50px; /* Adds spacing inside the column. */
+    display: flex; /* Flexbox for aligning content inside each column. */
+    flex-direction: column; /* Stacks content vertically within the column. */
+    justify-content: center; /* Centers content vertically. */
+    text-align: center; /* Centers text horizontally. */
+}
+
+/* Styling for blockquotes (quotes in the columns). */
+blockquote {
+    font-size: clamp(1em, 2vw, 1.9em); /* Responsive font size using clamp(). */
+    font-style: italic; /* Italicized text for quotes. */
+    margin-bottom: 10px; /* Space below the quote. */
+    text-align: center; /* Center-aligns the quote text. */
+}
+
+/* Styling for quote authors (names below blockquotes). */
+.quote-author {
+    font-size: 0.8em; /* Smaller font size for the author's name. */
+    color: #555; /* Subtle gray color for the text. */
+    margin-top: 5px; /* Space above the author's name. */
+    text-align: center; /* Centers the author's name. */
+}
+
+/* RESPONSIVE DESIGN - MEDIA QUERIES */
+/* Styles for screens smaller than 768px (e.g., tablets). */
+@media (max-width: 768px) {
+    body {
+        font-size: 0.9em; /* Slightly smaller text for better readability. */
+    }
+
+    .two-column-block {
+        flex-direction: column; /* Stacks columns vertically on smaller screens. */
+    }
+
+    .three-column-gallery div {
+        flex: 1 1 100%; /* Columns take up full width. */
+        padding: 15px; /* Reduce padding for smaller screens. */
+    }
+}
+
+/* Styles for screens smaller than 480px (e.g., smartphones). */
+@media (max-width: 480px) {
+    blockquote {
+        font-size: 1.2em; /* Smaller font size for quotes. */
+    }
+
+    .quote-author {
+        font-size: 0.7em; /* Smaller font size for author names. */
+    }
+
+    .three-column-gallery div {
+        flex: 1 1 100%; /* Each column takes full width on small screens. */
+        padding: 10px; /* Reduce padding for smaller screens. */
+    }
+}
