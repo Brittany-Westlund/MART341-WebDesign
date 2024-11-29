@@ -21,25 +21,20 @@
 
 /* Set a fixed height for the carousel */
 #carouselExampleIndicators {
-    height: 400px;
+    height: 100%;  /* Fill the full height of the carousel */
   }
 
-/* Ensure carousel-inner takes up the full height */
-.carousel-inner {
-    height: 100%;
-  }
-
-/* Ensure the images fill the carousel and maintain their aspect ratio */
+/* Ensure images fill the carousel and maintain their aspect ratio */
 .carousel-inner img {
-    height: 400px; /* Fill the height of the carousel */
+    height: 300 px; /* Fill the height of the carousel */
     width: auto; /* Ensure the width covers the full container */
     object-fit: cover; /* Maintain aspect ratio while covering the full space */
   }
 
 .carousel-item img {
-    object-fit: cover; /* Makes the image fill the container */
-    width: 100%; /* Ensures the image takes full width */
-    height: 100%; /* Ensures the image fills the full height */
+    height: 100%;           /* Make the image height match the container */
+    width: 100%;            /* Ensure the image fills the width */
+    object-fit: cover;      /* Maintain aspect ratio and cover the space */
   }
 
 body {
