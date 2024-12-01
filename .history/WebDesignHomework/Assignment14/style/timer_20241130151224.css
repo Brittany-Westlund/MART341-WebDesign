@@ -1,0 +1,117 @@
+
+/* Base timer code */
+/* I changed the body selector to the ID selector #app so that it doesnt apply to all body elements */
+/* I also changed the height and added a background color */
+
+#timer1, #timer2, #timer3 {
+    place-items: center;
+    height: 400px;
+    background-color: #ffebeb;
+    padding: 5%;
+    width: 33.33%;
+  }
+
+#timer-section {
+    display: flex;
+}
+  
+  .base-timer {
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .base-timer__svg {
+    transform: scaleX(-1);
+  }
+  
+  .base-timer__circle {
+    fill: none;
+    stroke: none;
+  }
+  
+  .base-timer__path-elapsed {
+    stroke-width: 7px;
+    stroke: grey;
+  }
+  
+  .base-timer__path-remaining {
+    stroke-width: 7px;
+    stroke-linecap: round;
+    transform: rotate(90deg);
+    transform-origin: center;
+    transition: 1s linear all;
+    fill-rule: nonzero;
+    stroke: currentColor;
+  }
+  
+  /* I changed the color */
+  .base-timer__path-remaining.green {
+    color: rgb(98, 208, 195);
+  }
+  
+  .base-timer__path-remaining.orange {
+    color: orange;
+  }
+  
+  /* I changed the color */
+  .base-timer__path-remaining.red {
+    color: rgb(255, 116, 116);
+  }
+  
+  .base-timer__label {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+  }
+
+  /* Timer Buttons Styling */
+
+  button {
+    min-width: 5em;
+    height: 1.7em;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(233, 139, 139); /* Primary button color */
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    
+  }
+
+  button:hover {
+    background-color: rgb(255, 116, 116);
+  }
+  
+  button:active {
+    background-color: rgb(198, 82, 82); /* Darker when pressed */
+    transform: scale(0.97); /* Slight shrink effect */
+  }
+  
+  button.stop-button {
+    background-color: #dc3545; /* Red for stop button */
+  }
+  
+  button.stop-button:hover {
+    background-color: #b52a37; /* Darker red on hover */
+  }
+  
+  button.stop-button:active {
+    background-color: #7f1e29; /* Even darker when pressed */
+  }
+
+  .start-button, .stop-button {
+    border-radius: 30px;
+    margin: 8px;
+    text-transform: uppercase;
+
+  }
