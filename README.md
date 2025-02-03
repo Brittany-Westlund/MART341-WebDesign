@@ -26,5 +26,3 @@
 [Assignment 13](https://brittany-westlund.github.io/MART341-WebDesign/WebDesignHomework/Assignment13/)
 
 [Assignment 14](https://brittany-westlund.github.io/MART341-WebDesign/WebDesignHomework/Assignment14/)
-
-[Assignment 15](https://brittany-westlund.github.io/MART341-WebDesign/WebDesignHomework/Assignment15/)
