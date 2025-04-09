@@ -32,7 +32,7 @@ nav ul li a {
 
 @font-face {
     font-family: 'DuckCome';
-    src: url('..fonts/DuckCome.ttf') format('truetype');
+    src: url('fonts/DuckCome.ttf') format('truetype');
   }
 
 .font_alter {

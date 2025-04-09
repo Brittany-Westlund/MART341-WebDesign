@@ -29,18 +29,6 @@ nav ul li a {
     font-weight: bold;
 }
 
-
-@font-face {
-    font-family: 'DuckCome';
-    src: url('..fonts/DuckCome.ttf') format('truetype');
-  }
-
-.font_alter {
-    font-family: 'DuckCome', sans-serif;
-  }
-
-
-
 /* Dark gray banner styling */
 .banner {
     height: 200px;
