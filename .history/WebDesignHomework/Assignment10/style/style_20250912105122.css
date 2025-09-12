@@ -6,13 +6,12 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, sans-serif;
     background-image: url('../images/pexels-diva-33809952.jpg');  /* replace with your image path */
   background-size: cover;       /* scales image to fill the screen */
   background-position: center;  /* keeps image centered */
   background-repeat: no-repeat; /* prevents tiling */
   background-attachment: fixed; /* optional: makes it stay still when scrolling */
-  
 }
 
 /* Navigation styling */
@@ -33,15 +32,13 @@ nav ul li a {
     color: #6a6684;
     text-decoration: none;
     font-weight: bold;
-    font-size: 80%;
 }
 
 /* Dark gray banner styling */
 .banner {
-    font-family: 'Montserrat', sans-serif;
-    height: 165px;
+    height: 200px;
     background: #333 url('../images/wave-texture.png');
-    background-size: 700px auto;    
+    background-size: 500px auto;    
     color: white;
     display: flex;
     align-items: center;
@@ -106,6 +103,5 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: 800px;
-    font-size: 60%;
+    margin-top: 1800px;
 }
