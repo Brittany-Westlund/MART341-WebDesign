@@ -1,0 +1,161 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('../images/pexels-diva-33809952.jpg');  /* replace with your image path */
+  background-size: cover;       /* scales image to fill the screen */
+  background-position: center;  /* keeps image centered */
+  background-repeat: no-repeat; /* prevents tiling */
+  background-attachment: fixed; /* optional: makes it stay still when scrolling */
+  
+}
+
+/* Navigation styling */
+nav {
+    background-color: #ffffff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #6a6684;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 80%;
+}
+
+/* Dark gray banner styling */
+.banner {
+    font-family: 'Montserrat', sans-serif;
+    height: 165px;
+    background: #333 url('../images/wave-texture.png');
+    background-size: 700px auto;    
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+/* Banner image styling */
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    
+}
+
+/* Two-column block styling */
+.two-column-block {
+    display: flex;
+}
+
+.two-column-block div {
+    flex: 1;
+    padding: 90px;
+    text-align: center;
+}
+
+.left-section {
+    background-color: #d55737;
+}
+
+.right-section {
+    background-color: #6a6684;
+}
+
+
+
+/* Full-width video styling */
+.full-width-video {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 800px;
+    font-size: 70%;
+}
+
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;            /* space between tiles */
+  padding: 16px;        /* margin around the whole gallery */
+  box-sizing: border-box;
+}
+
+/* force two columns while there's room */
+.gallery .tile {
+  flex: 0 0 calc(50% - 8px);  /* 2 cols; subtract half the gap so they fit */
+  margin: 0;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;           /* keeps images neatly cropped */
+  /* no border radius, no shadow */
+}
+
+/* images fill the tile */
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* drop to one column on small screens */
+@media (max-width: 640px) {
+  .gallery .tile { flex-basis: 100%; }
+}
+
+/* Remove default page margin so the hero can truly be full-bleed */
+html, body { margin: 0; }
+
+/* set a consistent height via a CSS variable */
+:root { --hero-h: 360px; }          /* desktop/tablet default */
+@media (max-width: 640px) { :root { --hero-h: 300px; } }  /* smaller on phones */
+
+/* Hero container controls height; tweak the middle value to taste */
+.hero {
+  position: relative;
+  height: var(--hero-h);            /* consistent height */
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.full-width-video {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;                /* fills the fixed height */
+  object-position: 50% 50%;         /* adjust focal point if needed */
+  filter: contrast(1.12) saturate(1.05) brightness(0.94);
+  transform: translateZ(0);
+}
+
+/* overlays from before still work as-is */
+.hero::after { /* … your dark gradient overlay … */ }
+.hero::before { /* … optional grain … */ }
+
+
+

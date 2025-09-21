@@ -1,0 +1,71 @@
+/* ==== SAFE MODE OVERRIDES (put at very end of your CSS) ==== */
+
+/* 0) Kill any global section/figure margins that might be sneaking in */
+section, figure { margin: 0; }
+
+/* 1) Background-attachment fixed can cause weird jumps on some devices */
+@media (max-width: 1024px) {
+  body { background-attachment: scroll; }
+}
+
+/* 2) Hero: hard lock sizing + stacking */
+:root { --hero-h: 340px; } /* tweak if you want shorter/taller */
+
+.hero {
+  position: relative !important;
+  height: var(--hero-h) !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  z-index: 0 !important;
+  background: #000; /* helps mask any brief load flash */
+}
+.full-width-video {
+  position: absolute !important; inset: 0 !important;
+  width: 100% !important; height: 100% !important;
+  object-fit: cover !important;
+  object-position: 50% 50% !important;
+  display: block !important;
+  filter: contrast(1.08) saturate(1.05) brightness(0.94) !important;
+  transform: translateZ(0) !important;
+}
+.hero::after {
+  content: "" !important;
+  position: absolute !important; inset: 0 !important; pointer-events: none !important;
+  background:
+    radial-gradient(120% 100% at 50% 0%,
+      rgba(0,0,0,.35) 0%,
+      rgba(0,0,0,.15) 40%,
+      rgba(0,0,0,.50) 100%),
+    linear-gradient(to top, rgba(0,0,0,.45), rgba(0,0,0,.10) 45%) !important;
+  mix-blend-mode: multiply !important;
+  z-index: 1 !important;
+}
+.hero::before {
+  display: none !important; /* disable grain for now to simplify */
+}
+
+/* 3) Pull-quote: snap right under hero, no surprise spacing */
+.hero + .pull-quote {
+  margin: 8px auto 24px !important;
+  padding: 0 16px !important;
+  max-width: 72ch !important;
+}
+.pull-quote { margin: 8px auto 24px !important; padding: 0 16px !important; }
+.pull-quote blockquote { margin: 0 !important; }
+.pull-quote::before { margin-bottom: 12px !important; }
+
+/* 4) Gallery: ensure 2 columns (then 1 on small) and remove any outer spacing clashes */
+.gallery {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 16px !important;
+  padding: 16px !important;
+}
+.gallery .tile { flex: 0 0 calc(50% - 8px) !important; aspect-ratio: 4 / 3 !important; overflow: hidden !important; }
+@media (max-width: 640px) { .gallery .tile { flex-basis: 100% !important; } }
+
+/* 5) Footer: remove the massive spacer while debugging */
+footer { margin-top: 48px !important; }

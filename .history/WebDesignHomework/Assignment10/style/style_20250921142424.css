@@ -1,0 +1,193 @@
+/* =========================
+   0) Base / Reset / Tokens
+   ========================= */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; }
+:root { --hero-h: 360px; }                  /* desktop/tablet hero height */
+@media (max-width: 640px){ :root { --hero-h: 300px; } }  /* phone hero */
+
+body{
+  font-family: 'Roboto', sans-serif;
+  color: #111;
+  background-image: url('../images/pexels-diva-33809952.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Avoid iOS/Android jank with fixed BG */
+@media (max-width: 1024px){
+  body { background-attachment: scroll; }
+}
+
+img, video { display:block; max-width:100%; }
+figure { margin: 0; }
+
+/* =========================
+   1) Navigation
+   ========================= */
+nav{
+  background-color:#fff;
+  padding:10px;
+  text-align:center;
+}
+nav ul{
+  list-style:none;
+  display:flex;
+  justify-content:right;
+  gap:20px;
+}
+nav ul li a{
+  color:#6a6684;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:80%;
+}
+
+/* =========================
+   2) Banner (optional)
+   ========================= */
+.banner{
+  font-family:'Montserrat', sans-serif;
+  height:165px;
+  background:#333 url('../images/wave-texture.png');
+  background-size:700px auto;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:3em;
+  text-align:center;
+  letter-spacing:.1em;
+}
+.banner-image{ width:100%; height:auto; }
+
+/* =========================
+   3) Hero Video
+   ========================= */
+.hero{
+  position:relative;
+  height:var(--hero-h);
+  overflow:hidden;
+  isolation:isolate;
+  margin-bottom:0;
+}
+.full-width-video{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  object-fit:cover;
+  object-position:50% 50%;
+  filter:contrast(1.12) saturate(1.05) brightness(0.94);
+  transform:translateZ(0);
+}
+/* Darkening overlay + vignette */
+.hero::after{
+  content:"";
+  position:absolute; inset:0; pointer-events:none;
+  /* no mix-blend-mode */
+  background:
+    radial-gradient(120% 100% at 50% 0%,
+      rgba(0,0,0,.32) 0%,
+      rgba(0,0,0,.14) 40%,
+      rgba(0,0,0,.46) 100%),
+    linear-gradient(to top, rgba(0,0,0,.40), rgba(0,0,0,.10) 45%);
+}
+
+/* Reduce motion if user prefers */
+@media (prefers-reduced-motion: reduce){
+  .full-width-video { filter: brightness(.95) contrast(1.05); }
+}
+
+/* =========================
+   4) Blockquote under Hero
+   ========================= */
+.pull-quote{
+  max-width:72ch;
+  margin:8px auto 32px;       /* snug under hero */
+  padding:0 16px;
+}
+.pull-quote blockquote{
+  margin:0;
+  font-size:clamp(1.1rem, 2.4vw, 1.6rem);
+  line-height:1.4;
+  font-weight:500;
+  color:#111;
+  position:relative;
+  padding-left:1.25rem;
+}
+.pull-quote blockquote::before{
+  content:"“";
+  position:absolute; left:-.1rem; top:-.35rem;
+  font-size:3rem; line-height:1;
+  color:rgba(0,0,0,.12);
+  font-weight:700; pointer-events:none;
+}
+.pull-quote figcaption{
+  margin-top:8px;
+  color:#555;
+  font-size:.95rem;
+}
+/* Optional divider */
+.pull-quote::before{
+  content:"";
+  display:block;
+  height:1px; width:72px;
+  background:linear-gradient(to right, rgba(0,0,0,.2), rgba(0,0,0,.06));
+  margin:0 0 14px 0;
+}
+
+/* =========================
+   5) Two-Column Block (content)
+   ========================= */
+.two-column-block{ display:flex; }
+.two-column-block div{
+  flex:1;
+  padding:90px;
+  text-align:center;
+}
+.left-section{ background-color:#d55737; color:#fff; }
+.right-section{ background-color:#6a6684; color:#fff; }
+
+/* =========================
+   6) Gallery (2×N → 1×1)
+   ========================= */
+.gallery{
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;
+  padding:16px;
+}
+.gallery .tile{
+  flex:0 0 calc(50% - 8px);   /* two columns */
+  aspect-ratio:4 / 3;
+  overflow:hidden;
+}
+.gallery img{
+  width:100%; height:100%;
+  object-fit:cover;
+}
+
+/* =========================
+   7) Footer
+   ========================= */
+footer{
+  background-color:#333;
+  color:#fff;
+  text-align:center;
+  padding:20px;
+  margin-top:64px;            /* trimmed from 800px */
+  font-size:70%;
+}
+
+/* =========================
+   8) Media Queries
+   ========================= */
+@media (max-width: 900px){
+  .two-column-block div{ padding:48px; }
+}
+@media (max-width: 640px){
+  .gallery .tile{ flex-basis:100%; }   /* one column */
+  .two-column-block{ flex-direction:column; }
+  .two-column-block div{ padding:32px; }
+}

@@ -1,0 +1,144 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('../images/pexels-diva-33809952.jpg');  /* replace with your image path */
+  background-size: cover;       /* scales image to fill the screen */
+  background-position: center;  /* keeps image centered */
+  background-repeat: no-repeat; /* prevents tiling */
+  background-attachment: fixed; /* optional: makes it stay still when scrolling */
+  
+}
+
+/* Navigation styling */
+nav {
+    background-color: #ffffff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #6a6684;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 80%;
+}
+
+/* Dark gray banner styling */
+.banner {
+    font-family: 'Montserrat', sans-serif;
+    height: 165px;
+    background: #333 url('../images/wave-texture.png');
+    background-size: 700px auto;    
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+/* Banner image styling */
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    
+}
+
+/* Two-column block styling */
+.two-column-block {
+    display: flex;
+}
+
+.two-column-block div {
+    flex: 1;
+    padding: 90px;
+    text-align: center;
+}
+
+.left-section {
+    background-color: #d55737;
+}
+
+.right-section {
+    background-color: #6a6684;
+}
+
+/* Styling for blockquote and author */
+blockquote {
+    font-size: 1.5em;
+    font-style: italic;
+    margin-bottom: 10px;
+    color: white;
+}
+
+#quote-author {
+    font-size: 1em;
+    color: #ffffff;
+    margin-top: 5px;
+}
+
+/* Full-width video styling */
+.full-width-video {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* always two columns */
+.gallery .tile {
+  flex: 0 0 50%;          /* exactly two columns */
+  margin: 0;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.15);
+  background: #f4f4f4;
+}
+
+/* images fill their tile */
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 800px;
+    font-size: 70%;
+}
+
+
+/* when it gets too narrow, go 1x1 */
+@media (max-width: 640px) {
+  .gallery .tile { flex-basis: 100%; }  /* one column */
+}
