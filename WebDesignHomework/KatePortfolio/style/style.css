@@ -145,8 +145,8 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 20px;
-    
+    padding: 45px;
+    height: 100px;
     font-size: 70%;
 }
 
@@ -175,6 +175,205 @@ footer {
   object-fit: cover;
   display: block;
 }
+
+
+
+
+
+
+
+.pull-quote-about {
+  max-width: 700px;
+  margin: 4rem auto;
+  padding: 3rem 3rem 2.5rem;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.8;
+  font-size: 1.2rem;
+  color: #222;
+  position: relative;
+}
+
+.pull-quote-about q {
+  quotes: "“" "”" "‘" "’";
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+
+/* Centered decorative open quote */
+.pull-quote-about q::before {
+  content: open-quote;
+  display: block;
+  font-size: 5rem;
+  color: #999;                 /* same strength as before */
+  position: absolute;
+  top: -5rem;                  /* moved higher */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Centered decorative closing quote */
+.pull-quote-about q::after {
+  content: close-quote;
+  display: block;
+  font-size: 5rem;
+  color: #999;
+  position: absolute;
+  bottom: -7.5rem;             /* moved lower */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.pull-quote-about figcaption {
+  display: block;
+  margin-top: 3.5rem;
+  font-style: normal;
+  font-weight: 500;
+  color: #666;
+}
+
+.gallery-about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.gallery-about img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 45px;
+  margin-left: 40px;
+ 
+}
+
+.gallery-about .tile:first-of-type,
+.gallery-about .pull-quote {
+  flex: 1 1 300px;
+}
+
+.pull-quote {
+  font-style: italic;
+  padding: 1rem;
+}
+
+
+
+
+
+
+
+.recognition {
+  text-align: center;
+  padding: 2rem;
+  line-height: 1.6;
+  color: #222;
+  margin-left: 2rem;
+}
+
+.recognition-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.recognition-list li {
+  margin: 1rem 0;
+}
+
+.recognition-list strong {
+  display: block;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 0.25rem;
+}
+
+.recognition-list .description {
+  display: block;
+  font-size: 1rem;
+  color: #444;
+  padding-bottom: 1rem;
+}
+
+
+
+
+
+.contact {
+  text-align: center;
+  margin: 3rem auto;
+  max-width: 500px;
+  padding: 2rem;
+  line-height: 1.7;
+  margin: 2rem;
+}
+
+.contact p {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 2rem;;
+}
+
+.contact a {
+  color: #6c63ff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+.shop-invite {
+  text-align: center;
+  margin: 4rem auto;
+  padding: 2.5rem 2rem;
+  max-width: 500px;
+  line-height: 1.8;
+  margin-left: 2rem;
+}
+
+.shop-invite p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 1.75rem;
+}
+
+.shop-button {
+  display: inline-block;
+  background-color: #2f2f2f;
+  color: #fff;
+  padding: 0.8rem 1.8rem;
+  border-radius: 2rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.shop-button:hover {
+  background-color: #b15134;
+}
+
+
+
+
+
+
+
+
+
+
 
 /* drop to one column on small screens */
 @media (max-width: 640px) {

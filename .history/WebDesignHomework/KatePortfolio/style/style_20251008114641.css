@@ -1,0 +1,349 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  background-image:
+    linear-gradient(rgba(255,255,255,.6), rgba(255,255,255,.6)), /* overlay UNDER content */
+    url('../images/pexels-diva-33809952.jpg');                  /* image */
+  background-size: cover, cover;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed, fixed; /* consider 'scroll' on mobile */
+}
+
+/* Navigation styling */
+nav {
+    background-color: #ffffff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #6a6684;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 80%;
+}
+
+/* Dark gray banner styling */
+.banner {
+    font-family: 'Montserrat', sans-serif;
+    height: 165px;
+    background: #333 url('../images/wave-texture.png');
+    background-size: 700px auto;    
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+/* Banner image styling */
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    
+}
+
+/* Two-column block styling */
+.two-column-block {
+    display: flex;
+}
+
+.two-column-block div {
+    flex: 1;
+    padding: 90px;
+    text-align: center;
+}
+
+.left-section {
+    background-color: #d55737;
+}
+
+.right-section {
+    background-color: #6a6684;
+}
+
+/* Styling for blockquote and author */
+/* ensure no unexpected figure margins */
+figure { margin: 0; }
+
+/* snug under the hero */
+.hero + .pull-quote {
+  margin: 24px auto 32px;
+  padding: 0 16px;
+  max-width: 72ch;
+}
+
+/* base style */
+.pull-quote blockquote {
+  margin: 0;
+  font-size: clamp(1.1rem, 2.4vw, 1.6rem);
+  line-height: 1.4;
+  font-weight: 500;
+  color: #111;
+  position: relative;
+  padding-left: 1.25rem;   /* space for the decorative mark */
+}
+
+/* big soft opening quote */
+.pull-quote blockquote::before {
+  content: "“";
+  position: absolute;
+  left: -0.1rem; top: -0.35rem;
+  font-size: 3rem; line-height: 1;
+  color: rgba(0,0,0,0.12);
+  font-weight: 700;
+  pointer-events: none;
+}
+
+/* subtle divider above */
+.pull-quote::before {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 72px;
+  background: linear-gradient(to right, rgba(0,0,0,.2), rgba(0,0,0,.06));
+  margin: 0 0 14px 0;
+}
+
+.pull-quote figcaption {
+  margin-top: 8px;
+  color: #555;
+  font-size: 0.95rem;
+}
+.pull-quote { text-align: center; }
+.pull-quote blockquote { padding-left: 0; }
+.pull-quote blockquote::before { display: none; }
+
+
+/* Full-width video styling */
+.full-width-video {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 45px;
+    height: 100px;
+    font-size: 70%;
+}
+
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;            /* space between tiles */
+  padding: 16px;        /* margin around the whole gallery */
+  box-sizing: border-box;
+}
+
+/* force two columns while there's room */
+.gallery .tile {
+  flex: 0 0 calc(50% - 8px);  /* 2 cols; subtract half the gap so they fit */
+  margin: 0;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;           /* keeps images neatly cropped */
+  /* no border radius, no shadow */
+}
+
+/* images fill the tile */
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+
+
+
+
+.pull-quote-about {
+  max-width: 700px;
+  margin: 4rem auto;
+  padding: 3rem 3rem 2.5rem;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.8;
+  font-size: 1.2rem;
+  color: #222;
+  position: relative;
+}
+
+.pull-quote-about q {
+  quotes: "“" "”" "‘" "’";
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+
+/* Centered decorative open quote */
+.pull-quote-about q::before {
+  content: open-quote;
+  display: block;
+  font-size: 5rem;
+  color: #999;                 /* same strength as before */
+  position: absolute;
+  top: -5rem;                  /* moved higher */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Centered decorative closing quote */
+.pull-quote-about q::after {
+  content: close-quote;
+  display: block;
+  font-size: 5rem;
+  color: #999;
+  position: absolute;
+  bottom: -7.5rem;             /* moved lower */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.pull-quote-about figcaption {
+  display: block;
+  margin-top: 3.5rem;
+  font-style: normal;
+  font-weight: 500;
+  color: #666;
+}
+
+.gallery-about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.gallery-about img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 45px;
+  margin-left: 40px;
+ 
+}
+
+.gallery-about .tile:first-of-type,
+.gallery-about .pull-quote {
+  flex: 1 1 300px;
+}
+
+.pull-quote {
+  font-style: italic;
+  padding: 1rem;
+}
+
+
+
+
+
+
+
+.recognition {
+  text-align: center;
+  padding: 3rem;
+  line-height: 1.6;
+  color: #222;
+}
+
+.recognition-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 650px;
+}
+
+.recognition-list li {
+  margin: 1.5rem 0;
+}
+
+.recognition-list strong {
+  display: block;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 0.25rem;
+}
+
+.recognition-list .description {
+  display: block;
+  font-size: 1.05rem;
+  color: #444;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* drop to one column on small screens */
+@media (max-width: 640px) {
+  .gallery .tile { flex-basis: 100%; }
+}
+
+/* Remove default page margin so the hero can truly be full-bleed */
+html, body { margin: 0; }
+
+/* set a consistent height via a CSS variable */
+:root { --hero-h: 340px; }          /* desktop/tablet default */
+@media (max-width: 640px) { :root { --hero-h: 300px; } }  /* smaller on phones */
+
+/* Hero container controls height; tweak the middle value to taste */
+.hero {
+  position: relative;
+  height: var(--hero-h);            /* consistent height */
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.full-width-video {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;                /* fills the fixed height */
+  object-position: 50% 50%;         /* adjust focal point if needed */
+  filter: contrast(1.12) saturate(1.05) brightness(0.94);
+  transform: translateZ(0);
+}
+
+/* overlays from before still work as-is */
+.hero::after { /* … your dark gradient overlay … */ }
+.hero::before { /* … optional grain … */ }
+
+
+
